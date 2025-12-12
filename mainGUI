@@ -52,7 +52,7 @@ UICorner.Parent = ScrollingFrame
 UICorner.CornerRadius = UDim.new(0, 12)
 
 Button.Name = "Button"
-Button.Parent = game.StarterGui.itemgetter.ItemTPer.ScrollingFrame.LocalScript
+Button.Parent = game.Players.LocalPlayer.PlayerGui.itemgetter.ItemTPer.ScrollingFrame.LocalScript
 Button.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
 Button.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
 Button.BorderSizePixel = 0
@@ -193,7 +193,7 @@ local function YGSBUSJ_fake_script() -- ScrollingFrame.LocalScript
 		["64"] = Vector3.new(48.2289505, 31.3100128, 705.013367),
 	
 	}
-
+	
 	local plr = game.Players.LocalPlayer
 	local frame = script.Parent
 	
