@@ -1,23 +1,13 @@
---[[
-
-		Gui2Lua™
-		10zOfficial
-		Version 1.0.0
-
-]]
-
-
--- Instances
 
 local itemgetter = Instance.new("ScreenGui")
 local ItemTPer = Instance.new("ImageButton")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local UICorner = Instance.new("UICorner")
-local Button = Instance.new("TextButton")
 local buttonsFolder = Instance.new("Folder")
 local dance = Instance.new("TextButton")
 local trip = Instance.new("TextButton")
 local sit = Instance.new("TextButton")
+local Button = Instance.new("TextButton")
 local openclose = Instance.new("TextButton")
 
 -- Properties
@@ -50,19 +40,6 @@ ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 6000)
 
 UICorner.Parent = ScrollingFrame
 UICorner.CornerRadius = UDim.new(0, 12)
-
-Button.Name = "Button"
-Button.Parent = game.Players.LocalPlayer.PlayerGui.itemgetter.ItemTPer.ScrollingFrame.LocalScript
-Button.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
-Button.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
-Button.BorderSizePixel = 0
-Button.Position = UDim2.new(0.0675346926, 0, 0.00483333319, 0)
-Button.Size = UDim2.new(0, 166, 0, 50)
-Button.Font = Enum.Font.Highway
-Button.Text = "Go to"
-Button.TextColor3 = Color3.new(0.968627, 1, 0.976471)
-Button.TextSize = 38
-Button.TextWrapped = true
 
 buttonsFolder.Name = "buttonsFolder"
 buttonsFolder.Parent = ScrollingFrame
@@ -106,6 +83,19 @@ sit.TextColor3 = Color3.new(0.968627, 1, 0.976471)
 sit.TextSize = 38
 sit.TextWrapped = true
 
+Button.Name = "Button"
+Button.Parent = ItemTPer
+Button.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+Button.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+Button.BorderSizePixel = 0
+Button.Position = UDim2.new(0.0675346926, 0, 0.00483333319, 0)
+Button.Size = UDim2.new(0, 166, 0, 50)
+Button.Font = Enum.Font.Highway
+Button.Text = "Go to"
+Button.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+Button.TextSize = 38
+Button.TextWrapped = true
+
 openclose.Name = "openclose"
 openclose.Parent = itemgetter
 openclose.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
@@ -121,7 +111,7 @@ openclose.TextWrapped = true
 
 -- Scripts
 
-local function YGSBUSJ_fake_script() -- ScrollingFrame.LocalScript 
+local function XWQJCDK_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	local frame = script.Parent
@@ -211,7 +201,7 @@ local function YGSBUSJ_fake_script() -- ScrollingFrame.LocalScript
 	
 	-- Create buttons
 	for i, pos in pairs(locationsTbl) do
-		local btn = script.Button:Clone()
+		local btn = script.Parent.Parent.Button:Clone()
 		btn.Parent = frame.buttonsFolder
 		btn.Name = tostring(i)
 		btn.Text = "Go to " .. i
@@ -302,8 +292,8 @@ local function YGSBUSJ_fake_script() -- ScrollingFrame.LocalScript
 	end)
 	
 end
-coroutine.wrap(YGSBUSJ_fake_script)()
-local function VIGNW_fake_script() -- openclose.LocalScript 
+coroutine.wrap(XWQJCDK_fake_script)()
+local function HQCEU_fake_script() -- openclose.LocalScript 
 	local script = Instance.new('LocalScript', openclose)
 
 	local objective = script.Parent.Parent.ItemTPer
@@ -316,4 +306,4 @@ local function VIGNW_fake_script() -- openclose.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VIGNW_fake_script)()
+coroutine.wrap(HQCEU_fake_script)()
