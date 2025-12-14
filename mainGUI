@@ -1,14 +1,34 @@
+--[[
+
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
+
+
+-- Instances
 
 local itemgetter = Instance.new("ScreenGui")
-local ItemTPer = Instance.new("ImageButton")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local UICorner = Instance.new("UICorner")
-local buttonsFolder = Instance.new("Folder")
-local dance = Instance.new("TextButton")
-local trip = Instance.new("TextButton")
-local sit = Instance.new("TextButton")
-local Button = Instance.new("TextButton")
 local openclose = Instance.new("TextButton")
+local ItemTPer = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local ItemTPer_2 = Instance.new("Frame")
+local buttonsFolder = Instance.new("Folder")
+local UIPageLayout = Instance.new("UIPageLayout")
+local UICorner = Instance.new("UICorner")
+local bears = Instance.new("Folder")
+local blackbear = Instance.new("TextButton")
+local motherbear = Instance.new("TextButton")
+local polarbear = Instance.new("TextButton")
+local sciencebear = Instance.new("TextButton")
+local misc = Instance.new("Folder")
+local autotp = Instance.new("TextButton")
+local redeemcodes = Instance.new("TextButton")
+local gotohive = Instance.new("TextButton")
+local skip = Instance.new("TextButton")
+local previous = Instance.new("TextButton")
+local Button = Instance.new("TextButton")
 
 -- Properties
 
@@ -16,17 +36,28 @@ itemgetter.Name = "itemgetter"
 itemgetter.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 itemgetter.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
+openclose.Name = "openclose"
+openclose.Parent = itemgetter
+openclose.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+openclose.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+openclose.BorderSizePixel = 0
+openclose.Position = UDim2.new(0.876112878, 0, 0.633650959, 0)
+openclose.Size = UDim2.new(0, 139, 0, 34)
+openclose.Font = Enum.Font.Highway
+openclose.Text = "Open / Close"
+openclose.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+openclose.TextScaled = true
+openclose.TextSize = 38
+openclose.TextWrapped = true
+
 ItemTPer.Name = "ItemTPer"
 ItemTPer.Parent = itemgetter
-ItemTPer.BackgroundColor3 = Color3.new(0, 0, 0)
-ItemTPer.BackgroundTransparency = 0.25
-ItemTPer.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ItemTPer.BackgroundColor3 = Color3.new(1, 1, 1)
+ItemTPer.BackgroundTransparency = 1
+ItemTPer.BorderColor3 = Color3.new(0, 0, 0)
 ItemTPer.BorderSizePixel = 0
-ItemTPer.Position = UDim2.new(-1, 0, -0.993966818, -40)
+ItemTPer.Position = UDim2.new(-1, 0, -0.994000018, -40)
 ItemTPer.Size = UDim2.new(3, 0, 3, 0)
-ItemTPer.AutoButtonColor = false
-ItemTPer.Image = "rbxassetid://924320031"
-ItemTPer.ImageTransparency = 1
 
 ScrollingFrame.Parent = ItemTPer
 ScrollingFrame.Active = true
@@ -34,85 +65,197 @@ ScrollingFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 ScrollingFrame.BackgroundColor3 = Color3.new(0.196078, 0.513726, 1)
 ScrollingFrame.BorderColor3 = Color3.new(0.133333, 0.341176, 0.658824)
 ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0.484776258, 0, 0.515432179, 0)
-ScrollingFrame.Size = UDim2.new(0, 370, 0, 564)
+ScrollingFrame.Position = UDim2.new(0.507857621, 0, 0.630717576, 0)
+ScrollingFrame.Size = UDim2.new(0, 502, 0, 157)
+ScrollingFrame.Visible = false
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 6000)
 
-UICorner.Parent = ScrollingFrame
-UICorner.CornerRadius = UDim.new(0, 12)
+ItemTPer_2.Name = "ItemTPer"
+ItemTPer_2.Parent = ItemTPer
+ItemTPer_2.Active = true
+ItemTPer_2.AnchorPoint = Vector2.new(0.5, 0.5)
+ItemTPer_2.BackgroundColor3 = Color3.new(0.196078, 0.513726, 1)
+ItemTPer_2.BorderColor3 = Color3.new(0, 0, 0)
+ItemTPer_2.BorderSizePixel = 0
+ItemTPer_2.Position = UDim2.new(0.507835865, 0, 0.610707045, 0)
+ItemTPer_2.Size = UDim2.new(0, 500, 0, 155)
 
 buttonsFolder.Name = "buttonsFolder"
-buttonsFolder.Parent = ScrollingFrame
+buttonsFolder.Parent = ItemTPer_2
 
-dance.Name = "dance"
-dance.Parent = ScrollingFrame
-dance.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
-dance.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
-dance.BorderSizePixel = 0
-dance.Position = UDim2.new(0.601049125, 0, 0.00716666644, 0)
-dance.Size = UDim2.new(0, 132, 0, 50)
-dance.Font = Enum.Font.Highway
-dance.Text = "Dance"
-dance.TextColor3 = Color3.new(0.968627, 1, 0.976471)
-dance.TextSize = 38
-dance.TextWrapped = true
+UIPageLayout.Parent = buttonsFolder
+UIPageLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIPageLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+UIPageLayout.Padding = UDim.new(0, 700)
+UIPageLayout.TweenTime = 0.5
 
-trip.Name = "trip"
-trip.Parent = ScrollingFrame
-trip.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
-trip.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
-trip.BorderSizePixel = 0
-trip.Position = UDim2.new(0.598346472, 0, 0.0178333335, 0)
-trip.Size = UDim2.new(0, 132, 0, 50)
-trip.Font = Enum.Font.Highway
-trip.Text = "Trip"
-trip.TextColor3 = Color3.new(0.968627, 1, 0.976471)
-trip.TextSize = 38
-trip.TextWrapped = true
+UICorner.Parent = ItemTPer_2
+UICorner.CornerRadius = UDim.new(0, 12)
 
-sit.Name = "sit"
-sit.Parent = ScrollingFrame
-sit.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
-sit.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
-sit.BorderSizePixel = 0
-sit.Position = UDim2.new(0.601049125, 0, 0.0296666659, 0)
-sit.Size = UDim2.new(0, 132, 0, 50)
-sit.Font = Enum.Font.Highway
-sit.Text = "Sit"
-sit.TextColor3 = Color3.new(0.968627, 1, 0.976471)
-sit.TextSize = 38
-sit.TextWrapped = true
+bears.Name = "bears"
+bears.Parent = ItemTPer_2
+
+blackbear.Name = "blackbear"
+blackbear.Parent = bears
+blackbear.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+blackbear.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+blackbear.BorderSizePixel = 0
+blackbear.Position = UDim2.new(0.0695346668, 0, 0.108059198, 0)
+blackbear.Size = UDim2.new(0, 100, 0, 37)
+blackbear.Font = Enum.Font.Highway
+blackbear.Text = "Black Bear"
+blackbear.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+blackbear.TextScaled = true
+blackbear.TextSize = 38
+blackbear.TextWrapped = true
+
+motherbear.Name = "motherbear"
+motherbear.Parent = bears
+motherbear.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+motherbear.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+motherbear.BorderSizePixel = 0
+motherbear.Position = UDim2.new(0.289534658, 0, 0.108059198, 0)
+motherbear.Size = UDim2.new(0, 100, 0, 37)
+motherbear.Font = Enum.Font.Highway
+motherbear.Text = "Mother Bear"
+motherbear.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+motherbear.TextScaled = true
+motherbear.TextSize = 38
+motherbear.TextWrapped = true
+
+polarbear.Name = "polarbear"
+polarbear.Parent = bears
+polarbear.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+polarbear.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+polarbear.BorderSizePixel = 0
+polarbear.Position = UDim2.new(0.729534686, 0, 0.108059198, 0)
+polarbear.Size = UDim2.new(0, 100, 0, 37)
+polarbear.Font = Enum.Font.Highway
+polarbear.Text = "Polar Bear"
+polarbear.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+polarbear.TextScaled = true
+polarbear.TextSize = 38
+polarbear.TextWrapped = true
+
+sciencebear.Name = "sciencebear"
+sciencebear.Parent = bears
+sciencebear.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+sciencebear.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+sciencebear.BorderSizePixel = 0
+sciencebear.Position = UDim2.new(0.509534657, 0, 0.108059198, 0)
+sciencebear.Size = UDim2.new(0, 100, 0, 37)
+sciencebear.Font = Enum.Font.Highway
+sciencebear.Text = "Science Bear"
+sciencebear.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+sciencebear.TextScaled = true
+sciencebear.TextSize = 38
+sciencebear.TextWrapped = true
+
+misc.Name = "misc"
+misc.Parent = ItemTPer_2
+
+autotp.Name = "autotp"
+autotp.Parent = misc
+autotp.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+autotp.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+autotp.BorderSizePixel = 0
+autotp.Position = UDim2.new(0.729534686, 0, 0.695155799, 0)
+autotp.Size = UDim2.new(0, 100, 0, 37)
+autotp.Font = Enum.Font.Highway
+autotp.Text = "Auto tp to items (needs private server)"
+autotp.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+autotp.TextScaled = true
+autotp.TextSize = 38
+autotp.TextWrapped = true
+
+redeemcodes.Name = "redeemcodes"
+redeemcodes.Parent = misc
+redeemcodes.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+redeemcodes.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+redeemcodes.BorderSizePixel = 0
+redeemcodes.Position = UDim2.new(0.0695346668, 0, 0.695155799, 0)
+redeemcodes.Size = UDim2.new(0, 100, 0, 37)
+redeemcodes.Font = Enum.Font.Highway
+redeemcodes.Text = "Redeem Codes"
+redeemcodes.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+redeemcodes.TextScaled = true
+redeemcodes.TextSize = 38
+redeemcodes.TextWrapped = true
+
+gotohive.Name = "gotohive"
+gotohive.Parent = misc
+gotohive.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+gotohive.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+gotohive.BorderSizePixel = 0
+gotohive.Position = UDim2.new(0.399534672, 0, 0.695155799, 0)
+gotohive.Size = UDim2.new(0, 100, 0, 37)
+gotohive.Font = Enum.Font.Highway
+gotohive.Text = "Go to hive"
+gotohive.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+gotohive.TextScaled = true
+gotohive.TextSize = 38
+gotohive.TextWrapped = true
+
+skip.Name = "skip"
+skip.Parent = misc
+skip.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+skip.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+skip.BorderSizePixel = 0
+skip.Position = UDim2.new(0.943534672, 0, 0.695155799, 0)
+skip.Size = UDim2.new(0, 20, 0, 37)
+skip.Font = Enum.Font.Highway
+skip.Text = ">>"
+skip.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+skip.TextScaled = true
+skip.TextSize = 38
+skip.TextWrapped = true
+
+previous.Name = "previous"
+previous.Parent = misc
+previous.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+previous.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+previous.BorderSizePixel = 0
+previous.Position = UDim2.new(0.675534666, 0, 0.695155799, 0)
+previous.Size = UDim2.new(0, 20, 0, 37)
+previous.Font = Enum.Font.Highway
+previous.Text = "<<"
+previous.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+previous.TextScaled = true
+previous.TextSize = 38
+previous.TextWrapped = true
 
 Button.Name = "Button"
 Button.Parent = ItemTPer
 Button.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
 Button.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
 Button.BorderSizePixel = 0
-Button.Position = UDim2.new(0.0675346926, 0, 0.00483333319, 0)
-Button.Size = UDim2.new(0, 166, 0, 50)
+Button.Position = UDim2.new(1.34099996, 0, 0.365999997, 0)
+Button.Size = UDim2.new(0, 150, 0, 39)
 Button.Font = Enum.Font.Highway
 Button.Text = "Go to"
 Button.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+Button.TextScaled = true
 Button.TextSize = 38
 Button.TextWrapped = true
 
-openclose.Name = "openclose"
-openclose.Parent = itemgetter
-openclose.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
-openclose.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
-openclose.BorderSizePixel = 0
-openclose.Position = UDim2.new(0.819718897, 0, 0.567333341, 0)
-openclose.Size = UDim2.new(0, 195, 0, 51)
-openclose.Font = Enum.Font.Highway
-openclose.Text = "Open / Close"
-openclose.TextColor3 = Color3.new(0.968627, 1, 0.976471)
-openclose.TextSize = 38
-openclose.TextWrapped = true
-
 -- Scripts
 
-local function XWQJCDK_fake_script() -- ScrollingFrame.LocalScript 
-	local script = Instance.new('LocalScript', ScrollingFrame)
+local function VLKWN_fake_script() -- openclose.LocalScript 
+	local script = Instance.new('LocalScript', openclose)
+
+	local objective = script.Parent.Parent.ItemTPer
+	
+	script.Parent.Activated:Connect(function()
+		if objective.Visible == true then
+			objective.Visible = false
+		else
+			objective.Visible = true
+		end
+	end)
+end
+coroutine.wrap(VLKWN_fake_script)()
+local function OPGVE_fake_script() -- ItemTPer_2.LocalScript 
+	local script = Instance.new('LocalScript', ItemTPer_2)
 
 	local frame = script.Parent
 	
@@ -226,7 +369,7 @@ local function XWQJCDK_fake_script() -- ScrollingFrame.LocalScript
 	local plr = game.Players.LocalPlayer
 	local frame = script.Parent
 	
-	local function setupCharacterButtons(char)
+	--[[ local function setupCharacterButtons(char)
 		local humanoid = char:WaitForChild("Humanoid")
 	
 		-- Dance button
@@ -268,7 +411,7 @@ local function XWQJCDK_fake_script() -- ScrollingFrame.LocalScript
 		setupCharacterButtons(char)
 	end)
 	
-	
+	--]]
 	local UserInputService = game:GetService("UserInputService")
 	local plr = game.Players.LocalPlayer
 	local objective = script.Parent.Parent
@@ -279,7 +422,7 @@ local function XWQJCDK_fake_script() -- ScrollingFrame.LocalScript
 	-- Toggle function
 	local function toggleObjective()
 		objective.Visible = not objective.Visible
-	end
+	end 
 	
 	-- Listen for key press
 	UserInputService.InputBegan:Connect(function(input, gameProcessed)
@@ -292,18 +435,249 @@ local function XWQJCDK_fake_script() -- ScrollingFrame.LocalScript
 	end)
 	
 end
-coroutine.wrap(XWQJCDK_fake_script)()
-local function HQCEU_fake_script() -- openclose.LocalScript 
-	local script = Instance.new('LocalScript', openclose)
+coroutine.wrap(OPGVE_fake_script)()
+local function SKIMGUB_fake_script() -- ItemTPer_2.otherbuttons 
+	local script = Instance.new('LocalScript', ItemTPer_2)
 
-	local objective = script.Parent.Parent.ItemTPer
+	local plr = game.Players.LocalPlayer
+	local frame = script.Parent
 	
-	script.Parent.Activated:Connect(function()
-		if objective.Visible == true then
-			objective.Visible = false
-		else
-			objective.Visible = true
+	local locationsTbl = {
+		["1"] = Vector3.new(-54.3523827, 19.4243584, -62.2778854),
+		["2"] = Vector3.new(-293.512756, 50.1799393, 266.900116),
+		["3"] = Vector3.new(-357.538208, 129.899857, -227.214569),
+		["4"] = Vector3.new(139.456604, 64.4310455, 258.481812),
+		["5"] = Vector3.new(142.535141, 69.5271149, -217.049393),
+		["6"] = Vector3.new(6.46148396, 228.992645, -169.161346),
+		["7"] = Vector3.new(-444.322754, 122.515938, 353.599243),
+		["8"] = Vector3.new(-43.6894913, 148.992645, -249.789032),
+		["9"] = Vector3.new(146.350906, 37.4960327, 266.085938),
+		["10"] = Vector3.new(-380.694702, 54.6801872, 206.632004),
+		["11"] = Vector3.new(-436.266388, 94.3154297, 49.6124039),
+		["12"] = Vector3.new(5.21515608, 174.66423, -96.9601669),
+		["13"] = Vector3.new(32.6508675, 13.4000063, 405.863403),
+		["14"] = Vector3.new(-168.461044, 33.8404312, 76.9292984),
+		["15"] = Vector3.new(41.7359543, 151.055878, -531.89093),
+		["16"] = Vector3.new(-43.2754288, 194.356796, -263.054291),
+		["17"] = Vector3.new(-219.292206, 20.458292, -59.9053688),
+		["18"] = Vector3.new(272.849243, 97.6637955, 457.226166),
+		["19"] = Vector3.new(-232.845062, 184.924271, -249.955322),
+		["20"] = Vector3.new(175.854858, 69.5271149, -223.771194),
+		["21"] = Vector3.new(-233.272583, 43.7821693, 418.712189),
+		["22"] = Vector3.new(-383.714447, 55.4559212, 82.0820618),
+		["23"] = Vector3.new(338.761719, 130.920792, -233.843643),
+		["24"] = Vector3.new(369.31427, 84.8161621, -237.076523),
+		["25"] = Vector3.new(226.929382, 25252.5273, -716.011475),
+		["26"] = Vector3.new(301.856354, 25283.0273, -807.704651),
+		["27"] = Vector3.new(271.97345, 25294.1289, -871.085388),
+		["28"] = Vector3.new(-336.530914, 132.367783, -384.928253),
+		["29"] = Vector3.new(-481.066132, 71.7060547, -0.259687424),
+		["30"] = Vector3.new(3.35752201, 304.230499, -266.304932),
+		["31"] = Vector3.new(87.5965652, 310.219116, -294.333862),
+		["32"] = Vector3.new(98.6600647, 35.2028122, 355.489014),
+		["33"] = Vector3.new(77.3248978, 180.088516, -10000.5615),
+		["34"] = Vector3.new(-374.187805, 19.2932091, 494.705688),
+		["35"] = Vector3.new(-365.968414, 18.3247128, 464.209625),
+		["36"] = Vector3.new(-189.317154, 64.2632294, 367.294739),
+		["37"] = Vector3.new(-412.989502, 19.293211, 467.02417),
+		["38"] = Vector3.new(-312.023132, 117.165382, 477.466858),
+		["39"] = Vector3.new(-105.185333, 71.710907, 557.966675),
+		["40"] = Vector3.new(-115.209618, 71.7468948, 558.186157),
+		["41"] = Vector3.new(-124.223053, 71.7468948, 558.220947),
+		["42"] = Vector3.new(-468.904083, 100.259338, 173.329849),
+		["43"] = Vector3.new(-138.005035, 161.062897, -322.544891),
+		["44"] = Vector3.new(-132.090942, 100.209625, 545.749756),
+		["45"] = Vector3.new(68.8243103, 65.6009369, 316.63974),
+		["46"] = Vector3.new(10.3842773, 180.088516, -10091.1846),
+		["47"] = Vector3.new(87.3322296, 54.9402199, 396.049072),
+		["48"] = Vector3.new(131.649078, 117.509262, -63.0436325),
+		["49"] = Vector3.new(-64.2315216, 37.7169266, 113.387741),
+		["50"] = Vector3.new(218.618195, 35.426796, -29.1255779),
+		["51"] = Vector3.new(314.31192, 61.6384163, 213.963852),
+		["52"] = Vector3.new(14.0227938, 4.59281445, 68.1490021),
+		["53"] = Vector3.new(-378.062561, 17.6521683, 332.672241),
+		["54"] = Vector3.new(191.823471, 68.6525497, -163.641815),
+		["55"] = Vector3.new(110.860512, 63.7177925, -59.5777168),
+		["56"] = Vector3.new(34.8642769, 57.9650383, 190.510757),
+		["57"] = Vector3.new(-122.991501, 67.3708878, -218.436462),
+		["58"] = Vector3.new(83.8066254, 69.4766388, -142.149338),
+		["59"] = Vector3.new(263.946198, 57.1383095, 108.368507),
+		["60"] = Vector3.new(600.636108, 177.167313, -436.898132),
+		["61"] = Vector3.new(499.400879, 177.16832, -420.62561),
+		["62"] = Vector3.new(518.912781, 177.167679, -291.619812),
+		["63"] = Vector3.new(524.506042, 151.901627, -411.875977),
+		["64"] = Vector3.new(48.2289505, 31.3100128, 705.013367),
+	
+	}
+	
+	local bearsTbl = {
+		["black"] = Vector3.new(-254.793, 6.525, 296.79),
+		["mother"] = Vector3.new(-186.073, 6.665, 87.745),
+		["science"] = Vector3.new(268.629, 104.167, 19.669),
+		["polar"] = Vector3.new(-106.613, 119.572, -77.17)
+	}
+	local plr = game.Players.LocalPlayer
+	local frame = script.Parent
+	
+	-- Function to get HRP reliably
+	local function getHRP()
+		local char = plr.Character or plr.CharacterAdded:Wait()
+		return char:WaitForChild("HumanoidRootPart")
+	end
+	
+	-- Teleport function
+	local function goTo(pos)
+		local hrp = getHRP()
+		hrp.CFrame = CFrame.new(pos) + Vector3.new(math.random(-2,2), math.random(0,1), math.random(-2,2))
+	end
+	
+	local bearbuttonsfolder = script.Parent.bears
+	local miscbuttonsfolder = script.Parent.misc
+	
+	bearbuttonsfolder.blackbear.Activated:Connect(function()
+		goTo(bearsTbl.black)
+	end)
+	
+	bearbuttonsfolder.motherbear.Activated:Connect(function()
+		goTo(bearsTbl.mother)
+	end)
+	
+	bearbuttonsfolder.sciencebear.Activated:Connect(function()
+		goTo(bearsTbl.science)
+	end)
+	
+	bearbuttonsfolder.polarbear.Activated:Connect(function()
+		goTo(bearsTbl.polar)
+	end)
+	
+	miscbuttonsfolder.redeemcodes.Activated:Connect(function()
+		local codes = {
+			"Wax", "Roof", "Nectar", "Crawlers", "Connoisseur",
+			"Bopmaster", "38217", "ClubBean", "GumdropsForScience",
+			"BeesBuzz123",
+		}
+	
+		local event = game:GetService("ReplicatedStorage")
+			:WaitForChild("Events")
+			:WaitForChild("PromoCodeEvent")
+	
+		for _, code in ipairs(codes) do
+			event:FireServer(code)
+			task.wait() -- small delay to avoid rate limits
 		end
 	end)
+	
+	
+	local plr = game.Players.LocalPlayer
+	local frame = script.Parent
+	local autoBtn = script.Parent.misc.autotp
+	local collectibles = workspace:WaitForChild("Collectibles")
+	
+	
+	--------------------------------------------------
+	-- BUILD ORDERED LOCATION LIST (IMPORTANT)
+	--------------------------------------------------
+	
+	local locationKeys = {}
+	
+	for key in pairs(locationsTbl) do
+		table.insert(locationKeys, key)
+	end
+	
+	table.sort(locationKeys, function(a, b)
+		return tonumber(a) < tonumber(b)
+	end)
+	
+	--------------------------------------------------
+	-- AUTOTP LOGIC
+	--------------------------------------------------
+	
+	local autoEnabled = false
+	local currentIndex = 1
+	
+	local function nextLocation()
+		currentIndex += 1
+		if currentIndex > #locationKeys then
+			currentIndex = 1
+		end
+	end
+	
+	local function previousLocation()
+		currentIndex -= 1
+		if currentIndex > #locationKeys then
+			currentIndex = 1
+		end
+	end
+	
+	
+	collectibles.ChildRemoved:Connect(function()
+		if autoEnabled then
+			nextLocation()
+		end
+	end)
+	
+	miscbuttonsfolder.skip.Activated:Connect(function()
+		if autoEnabled then
+			nextLocation()
+		end
+	end)
+	
+	miscbuttonsfolder.previous.Activated:Connect(function()
+		if autoEnabled then
+			previousLocation()
+		end
+	end)
+	
+	-- Auto teleport loop
+	task.spawn(function()
+		while true do
+			if autoEnabled then
+				local key = locationKeys[currentIndex]
+				local pos = locationsTbl[key]
+				goTo(pos)
+			end
+			task.wait(0.2)
+		end
+	end)
+	
+	-- Toggle AutoTP
+	autoBtn.Activated:Connect(function()
+		autoEnabled = not autoEnabled
+		currentIndex = 1
+	
+		autoBtn.Text = autoEnabled and "AutoTP: ON" or "AutoTP: OFF"
+	end)
+	
+	local plr = game.Players.LocalPlayer
+	local honeycombValue = plr:WaitForChild("Honeycomb") -- ObjectValue
+	local miscbuttonsfolder = script.Parent.misc
+	
+	local hiveLocations = {
+		["Hive6"] = Vector3.new(-187.64, 4.751, 330.998),
+		["Hive5"] = Vector3.new(-149.64, 4.751, 330.998),
+		["Hive4"] = Vector3.new(-113.64, 4.751, 330.998),
+		["Hive3"] = Vector3.new(-76.64, 4.751, 330.998),
+		["Hive2"] = Vector3.new(-40.64, 4.751, 330.998),
+		["Hive1"] = Vector3.new(-3.64, 4.751, 330.998)
+	}
+	
+	miscbuttonsfolder.gotohive.Activated:Connect(function()
+		local hiveObject = honeycombValue.Value
+		if not hiveObject then
+			warn("Honeycomb ObjectValue is nil")
+			return
+		end
+	
+		local hiveName = hiveObject.Name
+		local targetPos = hiveLocations[hiveName]
+	
+		if targetPos then
+			goTo(targetPos)
+		else
+			warn("Invalid hive:", hiveName)
+		end
+	end)
+	
 end
-coroutine.wrap(HQCEU_fake_script)()
+coroutine.wrap(SKIMGUB_fake_script)()
+
