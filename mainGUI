@@ -1037,8 +1037,8 @@ local function PBEVAM_fake_script() -- ItemTPer_2.otherbuttons
 	local ENABLED = false
 	local REACH_DISTANCE = 1
 	local IGNORED_TEXTURE = "rbxassetid://1472135114"
-	local TWEEN_SPEED = 60 -- studs per second
-	local MAX_DISTANCE = 50 -- maximum distance to target
+	local TWEEN_SPEED = 75 -- studs per second
+	local MAX_DISTANCE = 65 -- maximum distance to target
 	
 	local collected = {}
 	local currentTween = nil
