@@ -14,20 +14,36 @@ local openclose = Instance.new("TextButton")
 local ItemTPer = Instance.new("Frame")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local ItemTPer_2 = Instance.new("Frame")
-local buttonsFolder = Instance.new("Folder")
-local UIPageLayout = Instance.new("UIPageLayout")
+local fields = Instance.new("Folder")
+local sunflower = Instance.new("ImageButton")
+local dandelion = Instance.new("ImageButton")
+local blueflower = Instance.new("ImageButton")
+local mushroom = Instance.new("ImageButton")
+local clover = Instance.new("ImageButton")
+local spider = Instance.new("ImageButton")
+local strawberry = Instance.new("ImageButton")
+local bamboo = Instance.new("ImageButton")
+local pineapple = Instance.new("ImageButton")
+local cactus = Instance.new("ImageButton")
+local pumpkin = Instance.new("ImageButton")
+local stickerprinter = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
-local bears = Instance.new("Folder")
-local blackbear = Instance.new("TextButton")
-local motherbear = Instance.new("TextButton")
-local polarbear = Instance.new("TextButton")
-local sciencebear = Instance.new("TextButton")
 local misc = Instance.new("Folder")
-local autotp = Instance.new("TextButton")
 local redeemcodes = Instance.new("TextButton")
 local gotohive = Instance.new("TextButton")
 local skip = Instance.new("TextButton")
 local previous = Instance.new("TextButton")
+local autotp = Instance.new("TextButton")
+local quests = Instance.new("ImageButton")
+local dispensers = Instance.new("ImageButton")
+local autocollect = Instance.new("TextButton")
+local haste = Instance.new("ImageButton")
+local shop = Instance.new("Folder")
+local silveregg = Instance.new("ImageButton")
+local basicegg = Instance.new("ImageButton")
+local backpack = Instance.new("TextButton")
+local magnet = Instance.new("TextButton")
+local megajug = Instance.new("TextButton")
 local Button = Instance.new("TextButton")
 
 -- Properties
@@ -80,93 +96,122 @@ ItemTPer_2.BorderSizePixel = 0
 ItemTPer_2.Position = UDim2.new(0.507835865, 0, 0.610707045, 0)
 ItemTPer_2.Size = UDim2.new(0, 500, 0, 155)
 
-buttonsFolder.Name = "buttonsFolder"
-buttonsFolder.Parent = ItemTPer_2
+fields.Name = "fields"
+fields.Parent = ItemTPer_2
 
-UIPageLayout.Parent = buttonsFolder
-UIPageLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIPageLayout.VerticalAlignment = Enum.VerticalAlignment.Center
-UIPageLayout.Padding = UDim.new(0, 700)
-UIPageLayout.TweenTime = 0.5
+sunflower.Name = "sunflower"
+sunflower.Parent = fields
+sunflower.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+sunflower.BorderColor3 = Color3.new(0, 0, 0)
+sunflower.BorderSizePixel = 0
+sunflower.Position = UDim2.new(0.0219999999, 0, 0.387096763, 0)
+sunflower.Size = UDim2.new(0, 37, 0, 37)
+sunflower.Image = "rbxassetid://2908769405"
+
+dandelion.Name = "dandelion"
+dandelion.Parent = fields
+dandelion.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+dandelion.BorderColor3 = Color3.new(0, 0, 0)
+dandelion.BorderSizePixel = 0
+dandelion.Position = UDim2.new(0.101999998, 0, 0.387096763, 0)
+dandelion.Size = UDim2.new(0, 37, 0, 37)
+dandelion.Image = "rbxassetid://2908769047"
+
+blueflower.Name = "blueflower"
+blueflower.Parent = fields
+blueflower.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+blueflower.BorderColor3 = Color3.new(0, 0, 0)
+blueflower.BorderSizePixel = 0
+blueflower.Position = UDim2.new(0.342000008, 0, 0.387096763, 0)
+blueflower.Size = UDim2.new(0, 37, 0, 37)
+blueflower.Image = "rbxassetid://2908768899"
+
+mushroom.Name = "mushroom"
+mushroom.Parent = fields
+mushroom.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+mushroom.BorderColor3 = Color3.new(0, 0, 0)
+mushroom.BorderSizePixel = 0
+mushroom.Position = UDim2.new(0.181999996, 0, 0.387096763, 0)
+mushroom.Size = UDim2.new(0, 37, 0, 37)
+mushroom.Image = "rbxassetid://2908769124"
+
+clover.Name = "clover"
+clover.Parent = fields
+clover.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+clover.BorderColor3 = Color3.new(0, 0, 0)
+clover.BorderSizePixel = 0
+clover.Position = UDim2.new(0.261999995, 0, 0.387096763, 0)
+clover.Size = UDim2.new(0, 37, 0, 37)
+clover.Image = "rbxassetid://2908768973"
+
+spider.Name = "spider"
+spider.Parent = fields
+spider.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+spider.BorderColor3 = Color3.new(0, 0, 0)
+spider.BorderSizePixel = 0
+spider.Position = UDim2.new(0.501999974, 0, 0.387096763, 0)
+spider.Size = UDim2.new(0, 37, 0, 37)
+spider.Image = "rbxassetid://2908769301"
+
+strawberry.Name = "strawberry"
+strawberry.Parent = fields
+strawberry.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+strawberry.BorderColor3 = Color3.new(0, 0, 0)
+strawberry.BorderSizePixel = 0
+strawberry.Position = UDim2.new(0.421999991, 0, 0.387096763, 0)
+strawberry.Size = UDim2.new(0, 37, 0, 37)
+strawberry.Image = "rbxassetid://2908769330"
+
+bamboo.Name = "bamboo"
+bamboo.Parent = fields
+bamboo.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+bamboo.BorderColor3 = Color3.new(0, 0, 0)
+bamboo.BorderSizePixel = 0
+bamboo.Position = UDim2.new(0.582000017, 0, 0.387096763, 0)
+bamboo.Size = UDim2.new(0, 37, 0, 37)
+bamboo.Image = "rbxassetid://2908768829"
+
+pineapple.Name = "pineapple"
+pineapple.Parent = fields
+pineapple.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+pineapple.BorderColor3 = Color3.new(0, 0, 0)
+pineapple.BorderSizePixel = 0
+pineapple.Position = UDim2.new(0.662, 0, 0.387096763, 0)
+pineapple.Size = UDim2.new(0, 37, 0, 37)
+pineapple.Image = "rbxassetid://2908769153"
+
+cactus.Name = "cactus"
+cactus.Parent = fields
+cactus.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+cactus.BorderColor3 = Color3.new(0, 0, 0)
+cactus.BorderSizePixel = 0
+cactus.Position = UDim2.new(0.741999984, 0, 0.387096763, 0)
+cactus.Size = UDim2.new(0, 37, 0, 37)
+cactus.Image = "rbxassetid://2908768937"
+
+pumpkin.Name = "pumpkin"
+pumpkin.Parent = fields
+pumpkin.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+pumpkin.BorderColor3 = Color3.new(0, 0, 0)
+pumpkin.BorderSizePixel = 0
+pumpkin.Position = UDim2.new(0.822000027, 0, 0.387096763, 0)
+pumpkin.Size = UDim2.new(0, 37, 0, 37)
+pumpkin.Image = "rbxassetid://2908769220"
+
+stickerprinter.Name = "stickerprinter"
+stickerprinter.Parent = fields
+stickerprinter.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+stickerprinter.BorderColor3 = Color3.new(0, 0, 0)
+stickerprinter.BorderSizePixel = 0
+stickerprinter.Position = UDim2.new(0.90200001, 0, 0.387096763, 0)
+stickerprinter.Size = UDim2.new(0, 37, 0, 37)
+stickerprinter.Image = "rbxassetid://15742667867"
 
 UICorner.Parent = ItemTPer_2
 UICorner.CornerRadius = UDim.new(0, 12)
 
-bears.Name = "bears"
-bears.Parent = ItemTPer_2
-
-blackbear.Name = "blackbear"
-blackbear.Parent = bears
-blackbear.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
-blackbear.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
-blackbear.BorderSizePixel = 0
-blackbear.Position = UDim2.new(0.0695346668, 0, 0.108059198, 0)
-blackbear.Size = UDim2.new(0, 100, 0, 37)
-blackbear.Font = Enum.Font.Highway
-blackbear.Text = "Black Bear"
-blackbear.TextColor3 = Color3.new(0.968627, 1, 0.976471)
-blackbear.TextScaled = true
-blackbear.TextSize = 38
-blackbear.TextWrapped = true
-
-motherbear.Name = "motherbear"
-motherbear.Parent = bears
-motherbear.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
-motherbear.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
-motherbear.BorderSizePixel = 0
-motherbear.Position = UDim2.new(0.289534658, 0, 0.108059198, 0)
-motherbear.Size = UDim2.new(0, 100, 0, 37)
-motherbear.Font = Enum.Font.Highway
-motherbear.Text = "Mother Bear"
-motherbear.TextColor3 = Color3.new(0.968627, 1, 0.976471)
-motherbear.TextScaled = true
-motherbear.TextSize = 38
-motherbear.TextWrapped = true
-
-polarbear.Name = "polarbear"
-polarbear.Parent = bears
-polarbear.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
-polarbear.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
-polarbear.BorderSizePixel = 0
-polarbear.Position = UDim2.new(0.729534686, 0, 0.108059198, 0)
-polarbear.Size = UDim2.new(0, 100, 0, 37)
-polarbear.Font = Enum.Font.Highway
-polarbear.Text = "Polar Bear"
-polarbear.TextColor3 = Color3.new(0.968627, 1, 0.976471)
-polarbear.TextScaled = true
-polarbear.TextSize = 38
-polarbear.TextWrapped = true
-
-sciencebear.Name = "sciencebear"
-sciencebear.Parent = bears
-sciencebear.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
-sciencebear.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
-sciencebear.BorderSizePixel = 0
-sciencebear.Position = UDim2.new(0.509534657, 0, 0.108059198, 0)
-sciencebear.Size = UDim2.new(0, 100, 0, 37)
-sciencebear.Font = Enum.Font.Highway
-sciencebear.Text = "Science Bear"
-sciencebear.TextColor3 = Color3.new(0.968627, 1, 0.976471)
-sciencebear.TextScaled = true
-sciencebear.TextSize = 38
-sciencebear.TextWrapped = true
-
 misc.Name = "misc"
 misc.Parent = ItemTPer_2
-
-autotp.Name = "autotp"
-autotp.Parent = misc
-autotp.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
-autotp.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
-autotp.BorderSizePixel = 0
-autotp.Position = UDim2.new(0.729534686, 0, 0.695155799, 0)
-autotp.Size = UDim2.new(0, 100, 0, 37)
-autotp.Font = Enum.Font.Highway
-autotp.Text = "Auto tp to items (needs private server)"
-autotp.TextColor3 = Color3.new(0.968627, 1, 0.976471)
-autotp.TextScaled = true
-autotp.TextSize = 38
-autotp.TextWrapped = true
 
 redeemcodes.Name = "redeemcodes"
 redeemcodes.Parent = misc
@@ -187,7 +232,7 @@ gotohive.Parent = misc
 gotohive.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
 gotohive.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
 gotohive.BorderSizePixel = 0
-gotohive.Position = UDim2.new(0.399534672, 0, 0.695155799, 0)
+gotohive.Position = UDim2.new(0.453534663, 0, 0.688704193, 0)
 gotohive.Size = UDim2.new(0, 100, 0, 37)
 gotohive.Font = Enum.Font.Highway
 gotohive.Text = "Go to hive"
@@ -224,6 +269,124 @@ previous.TextScaled = true
 previous.TextSize = 38
 previous.TextWrapped = true
 
+autotp.Name = "autotp"
+autotp.Parent = misc
+autotp.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+autotp.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+autotp.BorderSizePixel = 0
+autotp.Position = UDim2.new(0.729534686, 0, 0.695155799, 0)
+autotp.Size = UDim2.new(0, 100, 0, 37)
+autotp.Font = Enum.Font.Highway
+autotp.Text = "Auto tp to items (needs private server)"
+autotp.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+autotp.TextScaled = true
+autotp.TextSize = 38
+autotp.TextWrapped = true
+
+quests.Name = "quests"
+quests.Parent = misc
+quests.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+quests.BorderColor3 = Color3.new(0, 0, 0)
+quests.BorderSizePixel = 0
+quests.Position = UDim2.new(0.365999997, 0, 0.693548381, 0)
+quests.Size = UDim2.new(0, 37, 0, 37)
+quests.Image = "rbxassetid://1436835355"
+
+dispensers.Name = "dispensers"
+dispensers.Parent = misc
+dispensers.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+dispensers.BorderColor3 = Color3.new(0, 0, 0)
+dispensers.BorderSizePixel = 0
+dispensers.Position = UDim2.new(0.277999997, 0, 0.693548381, 0)
+dispensers.Size = UDim2.new(0, 37, 0, 37)
+dispensers.Image = "rbxassetid://1472135114"
+
+autocollect.Name = "autocollect"
+autocollect.Parent = misc
+autocollect.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+autocollect.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+autocollect.BorderSizePixel = 0
+autocollect.Position = UDim2.new(0.675999999, 0, 0.0949999988, 0)
+autocollect.Size = UDim2.new(0, 93, 0, 37)
+autocollect.Font = Enum.Font.Highway
+autocollect.Text = "Auto Sprout Collect"
+autocollect.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+autocollect.TextScaled = true
+autocollect.TextSize = 38
+autocollect.TextWrapped = true
+
+haste.Name = "haste"
+haste.Parent = misc
+haste.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+haste.BorderColor3 = Color3.new(0, 0, 0)
+haste.BorderSizePixel = 0
+haste.Position = UDim2.new(0.867999971, 0, 0.0949999988, 0)
+haste.Size = UDim2.new(0, 37, 0, 37)
+haste.Image = "rbxassetid://9525535512"
+
+shop.Name = "shop"
+shop.Parent = ItemTPer_2
+
+silveregg.Name = "silveregg"
+silveregg.Parent = shop
+silveregg.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+silveregg.BorderColor3 = Color3.new(0, 0, 0)
+silveregg.BorderSizePixel = 0
+silveregg.Position = UDim2.new(0.148000002, 0, 0.0950000361, 0)
+silveregg.Size = UDim2.new(0, 37, 0, 37)
+silveregg.Image = "rbxassetid://1471848094"
+
+basicegg.Name = "basicegg"
+basicegg.Parent = shop
+basicegg.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+basicegg.BorderColor3 = Color3.new(0, 0, 0)
+basicegg.BorderSizePixel = 0
+basicegg.Position = UDim2.new(0.0680000037, 0, 0.0950000361, 0)
+basicegg.Size = UDim2.new(0, 37, 0, 37)
+basicegg.Image = "rbxassetid://1471846464"
+
+backpack.Name = "backpack"
+backpack.Parent = shop
+backpack.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+backpack.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+backpack.BorderSizePixel = 0
+backpack.Position = UDim2.new(0.228, 0, 0.0950000361, 0)
+backpack.Size = UDim2.new(0, 60, 0, 37)
+backpack.Font = Enum.Font.Highway
+backpack.Text = "Backpack"
+backpack.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+backpack.TextScaled = true
+backpack.TextSize = 38
+backpack.TextWrapped = true
+
+magnet.Name = "magnet"
+magnet.Parent = shop
+magnet.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+magnet.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+magnet.BorderSizePixel = 0
+magnet.Position = UDim2.new(0.352999985, 0, 0.0949999988, 0)
+magnet.Size = UDim2.new(0, 60, 0, 37)
+magnet.Font = Enum.Font.Highway
+magnet.Text = "Magnet"
+magnet.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+magnet.TextScaled = true
+magnet.TextSize = 38
+magnet.TextWrapped = true
+
+megajug.Name = "megajug"
+megajug.Parent = shop
+megajug.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+megajug.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+megajug.BorderSizePixel = 0
+megajug.Position = UDim2.new(0.479000002, 0, 0.0949999988, 0)
+megajug.Size = UDim2.new(0, 60, 0, 37)
+megajug.Font = Enum.Font.Highway
+megajug.Text = "Mega-Jug"
+megajug.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+megajug.TextScaled = true
+megajug.TextSize = 38
+megajug.TextWrapped = true
+
 Button.Name = "Button"
 Button.Parent = ItemTPer
 Button.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
@@ -240,7 +403,7 @@ Button.TextWrapped = true
 
 -- Scripts
 
-local function VLKWN_fake_script() -- openclose.LocalScript 
+local function DKQKHCB_fake_script() -- openclose.LocalScript 
 	local script = Instance.new('LocalScript', openclose)
 
 	local objective = script.Parent.Parent.ItemTPer
@@ -253,8 +416,8 @@ local function VLKWN_fake_script() -- openclose.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VLKWN_fake_script)()
-local function OPGVE_fake_script() -- ItemTPer_2.LocalScript 
+coroutine.wrap(DKQKHCB_fake_script)()
+local function CIKJ_fake_script() -- ItemTPer_2.LocalScript 
 	local script = Instance.new('LocalScript', ItemTPer_2)
 
 	local frame = script.Parent
@@ -330,45 +493,6 @@ local function OPGVE_fake_script() -- ItemTPer_2.LocalScript
 	local plr = game.Players.LocalPlayer
 	local frame = script.Parent
 	
-	-- Function to get HRP reliably
-	local function getHRP()
-		local char = plr.Character or plr.CharacterAdded:Wait()
-		return char:WaitForChild("HumanoidRootPart")
-	end
-	
-	-- Teleport function
-	local function goTo(pos)
-		local hrp = getHRP()
-		hrp.CFrame = CFrame.new(pos) + Vector3.new(math.random(-2,2), math.random(0,1), math.random(-2,2))
-	end
-	
-	-- Create buttons
-	for i, pos in pairs(locationsTbl) do
-		local btn = script.Parent.Parent.Button:Clone()
-		btn.Parent = frame.buttonsFolder
-		btn.Name = tostring(i)
-		btn.Text = "Go to " .. i
-	
-		-- Add a Vector3Value if not already
-		local valueObj = btn:FindFirstChild("Value")
-		if not valueObj then
-			valueObj = Instance.new("Vector3Value")
-			valueObj.Name = "Value"
-			valueObj.Parent = btn
-		end
-		valueObj.Value = pos
-	
-		btn.Position = UDim2.new(0, 15, 0, i * 55)
-	
-		-- Connect click here, not later
-		btn.Activated:Connect(function()
-			goTo(valueObj.Value)
-		end)
-	end
-	
-	local plr = game.Players.LocalPlayer
-	local frame = script.Parent
-	
 	--[[ local function setupCharacterButtons(char)
 		local humanoid = char:WaitForChild("Humanoid")
 	
@@ -435,8 +559,8 @@ local function OPGVE_fake_script() -- ItemTPer_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(OPGVE_fake_script)()
-local function SKIMGUB_fake_script() -- ItemTPer_2.otherbuttons 
+coroutine.wrap(CIKJ_fake_script)()
+local function PBEVAM_fake_script() -- ItemTPer_2.otherbuttons 
 	local script = Instance.new('LocalScript', ItemTPer_2)
 
 	local plr = game.Players.LocalPlayer
@@ -531,39 +655,32 @@ local function SKIMGUB_fake_script() -- ItemTPer_2.otherbuttons
 		hrp.CFrame = CFrame.new(pos) + Vector3.new(math.random(-2,2), math.random(0,1), math.random(-2,2))
 	end
 	
-	local bearbuttonsfolder = script.Parent.bears
+	local shopbuttonsfolder = script.Parent.shop
+	local fieldbuttonsfolder = script.Parent.fields
 	local miscbuttonsfolder = script.Parent.misc
 	
-	bearbuttonsfolder.blackbear.Activated:Connect(function()
-		goTo(bearsTbl.black)
-	end)
-	
-	bearbuttonsfolder.motherbear.Activated:Connect(function()
-		goTo(bearsTbl.mother)
-	end)
-	
-	bearbuttonsfolder.sciencebear.Activated:Connect(function()
-		goTo(bearsTbl.science)
-	end)
-	
-	bearbuttonsfolder.polarbear.Activated:Connect(function()
-		goTo(bearsTbl.polar)
-	end)
 	
 	miscbuttonsfolder.redeemcodes.Activated:Connect(function()
+		local PromoEvent = game.ReplicatedStorage:WaitForChild("Events"):WaitForChild("PromoCodeEvent")
 		local codes = {
-			"Wax", "Roof", "Nectar", "Crawlers", "Connoisseur",
-			"Bopmaster", "38217", "ClubBean", "GumdropsForScience",
+			"Wax",
+			"Roof",
+			"Nectar",
+			"Crawlers",
+			"Connoisseur",
+			"Bopmaster",
+			"38217",
+			"ClubBean",
+			"GumdropsForScience",
 			"BeesBuzz123",
+			"15MMembers",
+			"ThreeBeeVee",
+			"777"
 		}
 	
-		local event = game:GetService("ReplicatedStorage")
-			:WaitForChild("Events")
-			:WaitForChild("PromoCodeEvent")
-	
 		for _, code in ipairs(codes) do
-			event:FireServer(code)
-			task.wait() -- small delay to avoid rate limits
+			PromoEvent:FireServer(code)
+			task.wait(1.5)
 		end
 	end)
 	
@@ -678,6 +795,427 @@ local function SKIMGUB_fake_script() -- ItemTPer_2.otherbuttons
 		end
 	end)
 	
+	miscbuttonsfolder.dispensers.Activated:Connect(function()
+		local ToyEvent = game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToyEvent")
+		local dispensers = {
+			"Honey Dispenser",
+			"Treat Dispenser",
+			"Blueberry Dispenser",
+			"Strawberry Dispenser"
+		}
+	
+		for _, dispenser in ipairs(dispensers) do
+			ToyEvent:FireServer(dispenser)
+			task.wait(0.5)
+		end
+	end)
+	
+	local fieldLocations = {
+		["sunflower"] = Vector3.new(-211.9, 4, 235.6),
+		["dandelion"] = Vector3.new(-94.45, 4, 194.05),
+		["mushroom"] = Vector3.new(-84.3, 3.951, 148.85),
+		["clover"] = Vector3.new(115.95, 40.5, 162.75),
+		["blueflower"] = Vector3.new(73.05, 4.135, 108.3),
+		["strawberry"] = Vector3.new(-151, 20.132, 25.4),
+		["spider"] = Vector3.new(-42.8, 20.122, 25.35),
+		["bamboo"] = Vector3.new(64.85, 20.172, -3.7),
+		["pineapple"] = Vector3.new(253.95, 68.13, -174.15),
+		["cactus"] = Vector3.new(-245.9, 75.5, -95.8),
+		["pumpkin"] = Vector3.new(-244.45, 68, -174),
+		["stickerprinter"] = Vector3.new(201.273, 159.233, -199.067),
+	}
+	
+	fieldbuttonsfolder.sunflower.Activated:Connect(function()
+		goTo(fieldLocations.sunflower)
+	end)
+	
+	fieldbuttonsfolder.dandelion.Activated:Connect(function()
+		goTo(fieldLocations.dandelion)
+	end)
+	
+	fieldbuttonsfolder.mushroom.Activated:Connect(function()
+		goTo(fieldLocations.mushroom)
+	end)
+	
+	fieldbuttonsfolder.clover.Activated:Connect(function()
+		goTo(fieldLocations.clover)
+	end)
+	
+	fieldbuttonsfolder.blueflower.Activated:Connect(function()
+		goTo(fieldLocations.blueflower)
+	end)
+	
+	fieldbuttonsfolder.strawberry.Activated:Connect(function()
+		goTo(fieldLocations.strawberry)
+	end)
+	
+	fieldbuttonsfolder.spider.Activated:Connect(function()
+		goTo(fieldLocations.spider)
+	end)
+	
+	fieldbuttonsfolder.bamboo.Activated:Connect(function()
+		goTo(fieldLocations.bamboo)
+	end)
+	
+	fieldbuttonsfolder.pineapple.Activated:Connect(function()
+		goTo(fieldLocations.pineapple)
+	end)
+	
+	fieldbuttonsfolder.cactus.Activated:Connect(function()
+		goTo(fieldLocations.cactus)
+	end)
+	
+	fieldbuttonsfolder.pumpkin.Activated:Connect(function()
+		goTo(fieldLocations.pumpkin)
+	end)
+	
+	fieldbuttonsfolder.stickerprinter.Activated:Connect(function()
+		goTo(fieldLocations.stickerprinter)
+	end)
+	
+	shopbuttonsfolder.basicegg.Activated:Connect(function()
+		local args = {
+			"Purchase",
+			{
+				Type = "Basic",
+				Category = "Eggs",
+				Amount = 1
+			}
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ItemPackageEvent"):InvokeServer(unpack(args))
+	end)
+	
+	shopbuttonsfolder.silveregg.Activated:Connect(function()
+		local args = {
+			"Purchase",
+			{
+				Type = "Silver",
+				Category = "Eggs",
+				Amount = 1
+			}
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ItemPackageEvent"):InvokeServer(unpack(args))
+	end)
+	
+	
+	local function quests()
+		local plr = game.Players.LocalPlayer
+		local quests = plr.PlayerGui.ScreenGui.Menus.Children.Quests.Content.Frame
+	
+		for _, quest in quests:GetChildren() do
+			if quest:IsA("Frame") then
+				local args = {
+					quest.TitleBarBG.TitleBar.Text
+				}
+				game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("CompleteQuest"):FireServer(unpack(args))
+			end
+		end
+	
+		local GiveQuest = game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("GiveQuest")
+		local Quests = {
+			"Treat Tutorial",
+			"Bonding With Bees",
+			"Search For A Sunflower Seed",
+			"The Gist Of Jellies",
+			"Search For Strawberries",
+			"Binging On Blueberries",
+			"Royal Jelly Jamboree",
+			"Search For Sunflower Seeds",
+			"Picking Out Pineapples",
+			"Seven To Seven",
+	
+			"Sunflower Start",
+			"Dandelion Deed",
+			"Pollen Fetcher",
+			"Red Request",
+			"Into The Blue",
+			"Variety Fetcher",
+	
+			"Bamboo Boogie",
+			"Red Request 2",
+			"Cobweb Sweeper",
+			"Leisure Loot",
+			"White Pollen Wrangler",
+			"Pineapple Picking",
+			"Pollen Fetcher 2",
+			"Weed Wacker",
+			"Red + Blue = Gold"
+		}
+	
+		for _, quest in ipairs(Quests) do
+			GiveQuest:FireServer(quest)
+			task.wait(0.212)
+		end
+	end
+	
+	
+	miscbuttonsfolder.quests.Activated:Connect(function()
+		quests()
+	end)
+	
+	local UserInputService = game:GetService("UserInputService")
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end -- ignore if the player is typing in a chat
+		if input.UserInputType == Enum.UserInputType.Keyboard then
+			if input.KeyCode == Enum.KeyCode.H then
+				local hiveObject = honeycombValue.Value
+					if not hiveObject then
+						warn("Honeycomb ObjectValue is nil")
+					return
+				end
+	
+				local hiveName = hiveObject.Name
+				local targetPos = hiveLocations[hiveName]
+	
+				if targetPos then
+					goTo(targetPos)
+				else
+					warn("Invalid hive:", hiveName)
+				end
+			end
+		end
+	end)
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end -- ignore if the player is typing in a chat
+		if input.UserInputType == Enum.UserInputType.Keyboard then
+			if input.KeyCode == Enum.KeyCode.T then
+				quests()
+			end
+		end
+	end)
+	
+	shopbuttonsfolder.backpack.Activated:Connect(function()
+		local args = {
+			"Purchase",
+			{
+				Category = "Accessory",
+				Type = "Backpack"
+			}
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ItemPackageEvent"):InvokeServer(unpack(args))
+	end)
+	
+	shopbuttonsfolder.magnet.Activated:Connect(function()
+		local args = {
+			"Purchase",
+			{
+				Category = "Collector",
+				Type = "Magnet"
+			}
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ItemPackageEvent"):InvokeServer(unpack(args))
+	end)
+	
+	
+	shopbuttonsfolder.megajug.Activated:Connect(function()
+		local args = {
+			"Purchase",
+			{
+				Category = "Accessory",
+				Type = "Mega-Jug"
+			}
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ItemPackageEvent"):InvokeServer(unpack(args))
+	end)
+	
+	
+	
+	
+	
+	
+	
+	
+	local Players = game:GetService("Players")
+	local TweenService = game:GetService("TweenService")
+	
+	local player = Players.LocalPlayer
+	local button = script.Parent.misc.autocollect
+	local collectiblesFolder = workspace:WaitForChild("Collectibles")
+	
+	local ENABLED = false
+	local REACH_DISTANCE = 1
+	local IGNORED_TEXTURE = "rbxassetid://1472135114"
+	local TWEEN_SPEED = 50 -- studs per second
+	local MAX_DISTANCE = 30 -- maximum distance to target
+	
+	local collected = {}
+	local currentTween = nil
+	
+	-- Update button text
+	local function updateButton()
+		button.Text = ENABLED and "Auto Collect: ON" or "Auto Collect: OFF"
+	end
+	
+	local function hasIgnoredFrontDecal(obj)
+		local decal = obj:FindFirstChild("FrontDecal", true)
+		return decal and decal:IsA("Decal") and decal.Texture == IGNORED_TEXTURE
+	end
+	
+	local function getObjectPosition(obj)
+		if obj:IsA("Model") then
+			return obj.PrimaryPart and obj.PrimaryPart.Position
+		elseif obj:IsA("BasePart") then
+			return obj.Position
+		end
+	end
+	
+	-- Find nearest valid C within MAX_DISTANCE
+	local function findNearestC(hrp)
+		local nearest
+		local shortest = MAX_DISTANCE
+	
+		for _, obj in ipairs(collectiblesFolder:GetChildren()) do
+			if obj.Name == "C" and not collected[obj] and not hasIgnoredFrontDecal(obj) then
+				local pos = getObjectPosition(obj)
+				if pos then
+					local dist = (pos - hrp.Position).Magnitude
+					if dist < shortest then
+						shortest = dist
+						nearest = obj
+					end
+				end
+			end
+		end
+	
+		return nearest
+	end
+	
+	-- Tween to a target
+-- Tween to a target with Y offset
+local function tweenToTarget(hrp, targetPos, callback)
+	local offsetPos = targetPos + Vector3.new(0, 1.25, 0) -- Raise Y by 1.25 studs
+	local distance = (offsetPos - hrp.Position).Magnitude
+	local time = distance / TWEEN_SPEED
+	local tweenInfo = TweenInfo.new(time, Enum.EasingStyle.Linear)
+	local tween = TweenService:Create(hrp, tweenInfo, {CFrame = CFrame.new(offsetPos)})
+	currentTween = tween
+	tween:Play()
+	tween.Completed:Connect(function()
+		currentTween = nil
+		if callback then
+			callback()
+		end
+	end)
 end
-coroutine.wrap(SKIMGUB_fake_script)()
 
+	
+	-- Start auto-collect loop
+	local function startAutoCollect()
+		if not ENABLED then return end
+		local character = player.Character
+		if not character then return end
+		local hrp = character:FindFirstChild("HumanoidRootPart")
+		if not hrp then return end
+	
+		local target = findNearestC(hrp)
+		if not target then return end -- No valid target within 50 studs
+	
+		local pos = getObjectPosition(target)
+		if not pos then return end
+	
+		tweenToTarget(hrp, pos, function()
+			collected[target] = true
+			if ENABLED then
+				startAutoCollect()
+			end
+		end)
+	end
+	
+	-- Toggle button
+	button.MouseButton1Click:Connect(function()
+		ENABLED = not ENABLED
+		updateButton()
+	
+		-- Stop current tween if disabled
+		if not ENABLED and currentTween then
+			currentTween:Cancel()
+			currentTween = nil
+		end
+	
+		if ENABLED then
+			startAutoCollect()
+		end
+	end)
+	
+	-- Listen for newly added Cs
+-- Listen for newly added Cs (without cancelling current tween)
+collectiblesFolder.ChildAdded:Connect(function(child)
+	if ENABLED and child.Name == "C" then
+		-- Only start a new scan if no tween is currently running
+		if not currentTween then
+			startAutoCollect()
+		end
+	end
+end)
+
+	
+	updateButton()
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local button = script.Parent.misc.haste -- ImageButton
+	
+	local ENABLED = false
+	local WALK_SPEED = 50
+	local JUMP_POWER = 75
+	
+	local function applyHaste(character)
+		local humanoid = character:WaitForChild("Humanoid")
+	
+		humanoid.WalkSpeed = WALK_SPEED
+		humanoid.JumpPower = JUMP_POWER
+	
+		-- Force values to stay
+		humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+			if ENABLED then
+				humanoid.WalkSpeed = WALK_SPEED
+			end
+		end)
+	
+		humanoid:GetPropertyChangedSignal("JumpPower"):Connect(function()
+			if ENABLED then
+				humanoid.JumpPower = JUMP_POWER
+			end
+		end)
+	end
+	
+	-- Toggle button
+	button.MouseButton1Click:Connect(function()
+		ENABLED = not ENABLED
+	
+		local character = player.Character or player.CharacterAdded:Wait()
+	
+		if ENABLED then
+			applyHaste(character)
+		else
+			local humanoid = character:FindFirstChild("Humanoid")
+			if humanoid then
+				humanoid.WalkSpeed = 16
+				humanoid.JumpPower = 50
+			end
+		end
+	end)
+	
+	-- Re-apply after death
+	player.CharacterAdded:Connect(function(character)
+		if ENABLED then
+			task.wait(0.1)
+			applyHaste(character)
+		end
+	end)
+	
+end
+coroutine.wrap(PBEVAM_fake_script)()
