@@ -9,6 +9,8 @@
 
 -- Instances
 
+print("Version: 3 -- Bss Star Sign Grind Helper, Created by scriptloadyy / This User Has Been Restricted")
+
 local itemgetter = Instance.new("ScreenGui")
 local openclose = Instance.new("TextButton")
 local ItemTPer = Instance.new("Frame")
@@ -38,6 +40,7 @@ local quests = Instance.new("ImageButton")
 local dispensers = Instance.new("ImageButton")
 local autocollect = Instance.new("TextButton")
 local haste = Instance.new("ImageButton")
+local ignoretreats = Instance.new("TextButton")
 local shop = Instance.new("Folder")
 local silveregg = Instance.new("ImageButton")
 local basicegg = Instance.new("ImageButton")
@@ -306,7 +309,7 @@ autocollect.Parent = misc
 autocollect.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
 autocollect.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
 autocollect.BorderSizePixel = 0
-autocollect.Position = UDim2.new(0.675999999, 0, 0.0949999988, 0)
+autocollect.Position = UDim2.new(0.709999979, 0, 0.0950000361, 0)
 autocollect.Size = UDim2.new(0, 93, 0, 37)
 autocollect.Font = Enum.Font.Highway
 autocollect.Text = "Auto Sprout Collect"
@@ -320,9 +323,23 @@ haste.Parent = misc
 haste.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
 haste.BorderColor3 = Color3.new(0, 0, 0)
 haste.BorderSizePixel = 0
-haste.Position = UDim2.new(0.867999971, 0, 0.0949999988, 0)
+haste.Position = UDim2.new(0.90200001, 0, 0.0950000361, 0)
 haste.Size = UDim2.new(0, 37, 0, 37)
 haste.Image = "rbxassetid://9525535512"
+
+ignoretreats.Name = "ignoretreats"
+ignoretreats.Parent = misc
+ignoretreats.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+ignoretreats.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
+ignoretreats.BorderSizePixel = 0
+ignoretreats.Position = UDim2.new(0.629999995, 0, 0.0949999988, 0)
+ignoretreats.Size = UDim2.new(0, 37, 0, 37)
+ignoretreats.Font = Enum.Font.Highway
+ignoretreats.Text = "Ignore Treats"
+ignoretreats.TextColor3 = Color3.new(0.968627, 1, 0.976471)
+ignoretreats.TextScaled = true
+ignoretreats.TextSize = 38
+ignoretreats.TextWrapped = true
 
 shop.Name = "shop"
 shop.Parent = ItemTPer_2
@@ -403,7 +420,7 @@ Button.TextWrapped = true
 
 -- Scripts
 
-local function DKQKHCB_fake_script() -- openclose.LocalScript 
+local function YWLDZNR_fake_script() -- openclose.LocalScript 
 	local script = Instance.new('LocalScript', openclose)
 
 	local objective = script.Parent.Parent.ItemTPer
@@ -416,8 +433,8 @@ local function DKQKHCB_fake_script() -- openclose.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DKQKHCB_fake_script)()
-local function CIKJ_fake_script() -- ItemTPer_2.LocalScript 
+coroutine.wrap(YWLDZNR_fake_script)()
+local function UYMDK_fake_script() -- ItemTPer_2.LocalScript 
 	local script = Instance.new('LocalScript', ItemTPer_2)
 
 	local frame = script.Parent
@@ -559,8 +576,8 @@ local function CIKJ_fake_script() -- ItemTPer_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(CIKJ_fake_script)()
-local function PBEVAM_fake_script() -- ItemTPer_2.otherbuttons 
+coroutine.wrap(UYMDK_fake_script)()
+local function UMOY_fake_script() -- ItemTPer_2.otherbuttons 
 	local script = Instance.new('LocalScript', ItemTPer_2)
 
 	local plr = game.Players.LocalPlayer
@@ -1031,26 +1048,60 @@ local function PBEVAM_fake_script() -- ItemTPer_2.otherbuttons
 	local TweenService = game:GetService("TweenService")
 	
 	local player = Players.LocalPlayer
-	local button = script.Parent.misc.autocollect
+	
+	-- UI buttons
+	local autoCollectButton = script.Parent.misc.autocollect
+	local ignoreTreatsButton = script.Parent.misc.ignoretreats
+	
+	-- Collectibles folder
 	local collectiblesFolder = workspace:WaitForChild("Collectibles")
 	
+	-- Settings
 	local ENABLED = false
-	local REACH_DISTANCE = 1
-	local IGNORED_TEXTURE = "rbxassetid://1472135114"
-	local TWEEN_SPEED = 60 -- studs per second
-	local MAX_DISTANCE = 65 -- maximum distance to target
+	local IGNORE_TREATS = false
 	
+	local ALWAYS_IGNORED_TEXTURE = "rbxassetid://1472135114"
+	local TREATS_TEXTURE = "rbxassetid://2028574353"
+	
+	local TWEEN_SPEED = 60 -- studs per second
+	local MAX_DISTANCE = 50
+	local Y_OFFSET = 1.25
+	
+	-- State
 	local collected = {}
 	local currentTween = nil
 	
-	-- Update button text
-	local function updateButton()
-		button.Text = ENABLED and "Auto Collect: ON" or "Auto Collect: OFF"
+	--------------------------------------------------
+	-- UI Updates
+	--------------------------------------------------
+	
+	local function updateAutoCollectButton()
+		autoCollectButton.Text = ENABLED and "Auto Collect: ON" or "Auto Collect: OFF"
 	end
+	
+	local function updateIgnoreTreatsButton()
+		ignoreTreatsButton.Text = IGNORE_TREATS and "Ignore Treats: ON" or "Ignore Treats: OFF"
+	end
+	
+	--------------------------------------------------
+	-- Helpers
+	--------------------------------------------------
 	
 	local function hasIgnoredFrontDecal(obj)
 		local decal = obj:FindFirstChild("FrontDecal", true)
-		return decal and decal:IsA("Decal") and decal.Texture == IGNORED_TEXTURE
+		if not decal or not decal:IsA("Decal") then
+			return false
+		end
+	
+		if decal.Texture == ALWAYS_IGNORED_TEXTURE then
+			return true
+		end
+	
+		if IGNORE_TREATS and decal.Texture == TREATS_TEXTURE then
+			return true
+		end
+	
+		return false
 	end
 	
 	local function getObjectPosition(obj)
@@ -1061,7 +1112,10 @@ local function PBEVAM_fake_script() -- ItemTPer_2.otherbuttons
 		end
 	end
 	
-	-- Find nearest valid C within MAX_DISTANCE
+	--------------------------------------------------
+	-- Target Selection
+	--------------------------------------------------
+	
 	local function findNearestC(hrp)
 		local nearest
 		local shortest = MAX_DISTANCE
@@ -1082,35 +1136,46 @@ local function PBEVAM_fake_script() -- ItemTPer_2.otherbuttons
 		return nearest
 	end
 	
-	-- Tween to a target
--- Tween to a target with Y offset
-local function tweenToTarget(hrp, targetPos, callback)
-	local offsetPos = targetPos + Vector3.new(0, 1.25, 0) -- Raise Y by 1.25 studs
-	local distance = (offsetPos - hrp.Position).Magnitude
-	local time = distance / TWEEN_SPEED
-	local tweenInfo = TweenInfo.new(time, Enum.EasingStyle.Linear)
-	local tween = TweenService:Create(hrp, tweenInfo, {CFrame = CFrame.new(offsetPos)})
-	currentTween = tween
-	tween:Play()
-	tween.Completed:Connect(function()
-		currentTween = nil
-		if callback then
-			callback()
-		end
-	end)
-end
-
+	--------------------------------------------------
+	-- Tween Movement
+	--------------------------------------------------
 	
-	-- Start auto-collect loop
+	local function tweenToTarget(hrp, targetPos, callback)
+		local offsetPos = targetPos + Vector3.new(0, Y_OFFSET, 0)
+		local distance = (offsetPos - hrp.Position).Magnitude
+		local time = distance / TWEEN_SPEED
+	
+		local tweenInfo = TweenInfo.new(time, Enum.EasingStyle.Linear)
+		local tween = TweenService:Create(hrp, tweenInfo, {
+			CFrame = CFrame.new(offsetPos)
+		})
+	
+		currentTween = tween
+		tween:Play()
+	
+		tween.Completed:Connect(function()
+			currentTween = nil
+			if callback then
+				callback()
+			end
+		end)
+	end
+	
+	--------------------------------------------------
+	-- Auto Collect Loop
+	--------------------------------------------------
+	
 	local function startAutoCollect()
-		if not ENABLED then return end
+		if not ENABLED or currentTween then return end
+	
 		local character = player.Character
 		if not character then return end
+	
 		local hrp = character:FindFirstChild("HumanoidRootPart")
 		if not hrp then return end
 	
 		local target = findNearestC(hrp)
-		if not target then return end -- No valid target within 50 studs
+		if not target then return end
 	
 		local pos = getObjectPosition(target)
 		if not pos then return end
@@ -1123,12 +1188,14 @@ end
 		end)
 	end
 	
-	-- Toggle button
-	button.MouseButton1Click:Connect(function()
-		ENABLED = not ENABLED
-		updateButton()
+	--------------------------------------------------
+	-- Button Logic
+	--------------------------------------------------
 	
-		-- Stop current tween if disabled
+	autoCollectButton.MouseButton1Click:Connect(function()
+		ENABLED = not ENABLED
+		updateAutoCollectButton()
+	
 		if not ENABLED and currentTween then
 			currentTween:Cancel()
 			currentTween = nil
@@ -1139,20 +1206,53 @@ end
 		end
 	end)
 	
-	-- Listen for newly added Cs
--- Listen for newly added Cs (without cancelling current tween)
-collectiblesFolder.ChildAdded:Connect(function(child)
-	if ENABLED and child.Name == "C" then
-		-- Only start a new scan if no tween is currently running
-		if not currentTween then
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end -- ignore if the player is typing in a chat
+		if input.UserInputType == Enum.UserInputType.Keyboard then
+			if input.KeyCode == Enum.KeyCode.R then
+				ENABLED = not ENABLED
+				updateAutoCollectButton()
+	
+				if not ENABLED and currentTween then
+					currentTween:Cancel()
+					currentTween = nil
+				end
+	
+				if ENABLED then
+					startAutoCollect()
+				end
+			end
+		end
+	end)
+	
+	
+	ignoreTreatsButton.MouseButton1Click:Connect(function()
+		IGNORE_TREATS = not IGNORE_TREATS
+		updateIgnoreTreatsButton()
+	
+		-- Re-scan immediately if idle
+		if ENABLED and not currentTween then
 			startAutoCollect()
 		end
-	end
-end)
-
+	end)
 	
-	updateButton()
+	--------------------------------------------------
+	-- New Collectibles Listener
+	--------------------------------------------------
 	
+	collectiblesFolder.ChildAdded:Connect(function(child)
+		if ENABLED and child.Name == "C" and not currentTween then
+			startAutoCollect()
+		end
+	end)
+	
+	--------------------------------------------------
+	-- Init
+	--------------------------------------------------
+	
+	updateAutoCollectButton()
+	updateIgnoreTreatsButton()
 	
 	
 	
@@ -1218,4 +1318,4 @@ end)
 	end)
 	
 end
-coroutine.wrap(PBEVAM_fake_script)()
+coroutine.wrap(UMOY_fake_script)()
