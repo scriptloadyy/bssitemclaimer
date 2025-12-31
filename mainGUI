@@ -9,8 +9,6 @@
 
 -- Instances
 
-print("Version: 3 -- Bss Star Sign Grind Helper, Created by scriptloadyy / This User Has Been Restricted")
-
 local itemgetter = Instance.new("ScreenGui")
 local openclose = Instance.new("TextButton")
 local ItemTPer = Instance.new("Frame")
@@ -41,6 +39,7 @@ local dispensers = Instance.new("ImageButton")
 local autocollect = Instance.new("TextButton")
 local haste = Instance.new("ImageButton")
 local ignoretreats = Instance.new("TextButton")
+local present = Instance.new("ImageButton")
 local shop = Instance.new("Folder")
 local silveregg = Instance.new("ImageButton")
 local basicegg = Instance.new("ImageButton")
@@ -221,7 +220,7 @@ redeemcodes.Parent = misc
 redeemcodes.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
 redeemcodes.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
 redeemcodes.BorderSizePixel = 0
-redeemcodes.Position = UDim2.new(0.0695346668, 0, 0.695155799, 0)
+redeemcodes.Position = UDim2.new(0.0215346683, 0, 0.695155799, 0)
 redeemcodes.Size = UDim2.new(0, 100, 0, 37)
 redeemcodes.Font = Enum.Font.Highway
 redeemcodes.Text = "Redeem Codes"
@@ -235,8 +234,8 @@ gotohive.Parent = misc
 gotohive.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
 gotohive.BorderColor3 = Color3.new(0.145098, 0.447059, 0.207843)
 gotohive.BorderSizePixel = 0
-gotohive.Position = UDim2.new(0.453534663, 0, 0.688704193, 0)
-gotohive.Size = UDim2.new(0, 100, 0, 37)
+gotohive.Position = UDim2.new(0.47299999, 0, 0.688704193, 0)
+gotohive.Size = UDim2.new(0, 90, 0, 37)
 gotohive.Font = Enum.Font.Highway
 gotohive.Text = "Go to hive"
 gotohive.TextColor3 = Color3.new(0.968627, 1, 0.976471)
@@ -291,7 +290,7 @@ quests.Parent = misc
 quests.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
 quests.BorderColor3 = Color3.new(0, 0, 0)
 quests.BorderSizePixel = 0
-quests.Position = UDim2.new(0.365999997, 0, 0.693548381, 0)
+quests.Position = UDim2.new(0.389999986, 0, 0.694000006, 0)
 quests.Size = UDim2.new(0, 37, 0, 37)
 quests.Image = "rbxassetid://1436835355"
 
@@ -300,7 +299,7 @@ dispensers.Parent = misc
 dispensers.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
 dispensers.BorderColor3 = Color3.new(0, 0, 0)
 dispensers.BorderSizePixel = 0
-dispensers.Position = UDim2.new(0.277999997, 0, 0.693548381, 0)
+dispensers.Position = UDim2.new(0.310000002, 0, 0.693548381, 0)
 dispensers.Size = UDim2.new(0, 37, 0, 37)
 dispensers.Image = "rbxassetid://1472135114"
 
@@ -340,6 +339,15 @@ ignoretreats.TextColor3 = Color3.new(0.968627, 1, 0.976471)
 ignoretreats.TextScaled = true
 ignoretreats.TextSize = 38
 ignoretreats.TextWrapped = true
+
+present.Name = "present"
+present.Parent = misc
+present.BackgroundColor3 = Color3.new(0.105882, 0.466667, 0.168627)
+present.BorderColor3 = Color3.new(0, 0, 0)
+present.BorderSizePixel = 0
+present.Position = UDim2.new(0.228, 0, 0.693548381, 0)
+present.Size = UDim2.new(0, 37, 0, 37)
+present.Image = "rbxassetid://2659216738"
 
 shop.Name = "shop"
 shop.Parent = ItemTPer_2
@@ -420,7 +428,7 @@ Button.TextWrapped = true
 
 -- Scripts
 
-local function YWLDZNR_fake_script() -- openclose.LocalScript 
+local function CZDT_fake_script() -- openclose.LocalScript 
 	local script = Instance.new('LocalScript', openclose)
 
 	local objective = script.Parent.Parent.ItemTPer
@@ -433,77 +441,86 @@ local function YWLDZNR_fake_script() -- openclose.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YWLDZNR_fake_script)()
-local function UYMDK_fake_script() -- ItemTPer_2.LocalScript 
+coroutine.wrap(CZDT_fake_script)()
+local function QEFCRW_fake_script() -- ItemTPer_2.LocalScript 
 	local script = Instance.new('LocalScript', ItemTPer_2)
 
 	local frame = script.Parent
 	
 	local locationsTbl = {
-		["1"] = Vector3.new(110.860512, 63.7177925, -59.5777168),
-		["2"] = Vector3.new(-293.512756, 50.1799393, 266.900116),
-		["3"] = Vector3.new(-357.538208, 129.899857, -227.214569),
-		["4"] = Vector3.new(139.456604, 64.4310455, 258.481812),
-		["5"] = Vector3.new(142.535141, 69.5271149, -217.049393),
-		["6"] = Vector3.new(6.46148396, 228.992645, -169.161346),
-		["7"] = Vector3.new(-444.322754, 122.515938, 353.599243),
-		["8"] = Vector3.new(-43.6894913, 148.992645, -249.789032),
-		["9"] = Vector3.new(146.350906, 37.4960327, 266.085938),
-		["10"] = Vector3.new(-380.694702, 54.6801872, 206.632004),
-		["11"] = Vector3.new(-436.266388, 94.3154297, 49.6124039),
-		["12"] = Vector3.new(5.21515608, 174.66423, -96.9601669),
-		["13"] = Vector3.new(32.6508675, 13.4000063, 405.863403),
-		["14"] = Vector3.new(-168.461044, 33.8404312, 76.9292984),
-		["15"] = Vector3.new(41.7359543, 151.055878, -531.89093),
-		["16"] = Vector3.new(-43.2754288, 194.356796, -263.054291),
-		["17"] = Vector3.new(-219.292206, 20.458292, -59.9053688),
-		["18"] = Vector3.new(272.849243, 97.6637955, 457.226166),
-		["19"] = Vector3.new(-232.845062, 184.924271, -249.955322),
-		["20"] = Vector3.new(175.854858, 69.5271149, -223.771194),
-		["21"] = Vector3.new(-233.272583, 43.7821693, 418.712189),
-		["22"] = Vector3.new(-383.714447, 55.4559212, 82.0820618),
-		["23"] = Vector3.new(338.761719, 130.920792, -233.843643),
-		["24"] = Vector3.new(369.31427, 84.8161621, -237.076523),
-		["25"] = Vector3.new(226.929382, 25252.5273, -716.011475),
-		["26"] = Vector3.new(301.856354, 25283.0273, -807.704651),
-		["27"] = Vector3.new(271.97345, 25294.1289, -871.085388),
-		["28"] = Vector3.new(-336.530914, 132.367783, -384.928253),
-		["29"] = Vector3.new(-481.066132, 71.7060547, -0.259687424),
-		["30"] = Vector3.new(3.35752201, 304.230499, -266.304932),
-		["31"] = Vector3.new(87.5965652, 310.219116, -294.333862),
-		["32"] = Vector3.new(98.6600647, 35.2028122, 355.489014),
-		["33"] = Vector3.new(77.3248978, 180.088516, -10000.5615),
-		["34"] = Vector3.new(-374.187805, 19.2932091, 494.705688),
-		["35"] = Vector3.new(-365.968414, 18.3247128, 464.209625),
-		["36"] = Vector3.new(-189.317154, 64.2632294, 367.294739),
-		["37"] = Vector3.new(-412.989502, 19.293211, 467.02417),
-		["38"] = Vector3.new(-312.023132, 117.165382, 477.466858),
-		["39"] = Vector3.new(-105.185333, 71.710907, 557.966675),
-		["40"] = Vector3.new(-115.209618, 71.7468948, 558.186157),
-		["41"] = Vector3.new(-124.223053, 71.7468948, 558.220947),
-		["42"] = Vector3.new(-468.904083, 100.259338, 173.329849),
-		["43"] = Vector3.new(-138.005035, 161.062897, -322.544891),
-		["44"] = Vector3.new(-132.090942, 100.209625, 545.749756),
-		["45"] = Vector3.new(68.8243103, 65.6009369, 316.63974),
-		["46"] = Vector3.new(10.3842773, 180.088516, -10091.1846),
-		["47"] = Vector3.new(87.3322296, 54.9402199, 396.049072),
-		["48"] = Vector3.new(131.649078, 117.509262, -63.0436325),
-		["49"] = Vector3.new(-64.2315216, 37.7169266, 113.387741),
-		["50"] = Vector3.new(218.618195, 35.426796, -29.1255779),
-		["51"] = Vector3.new(314.31192, 61.6384163, 213.963852),
-		["52"] = Vector3.new(14.0227938, 4.59281445, 68.1490021),
-		["53"] = Vector3.new(-378.062561, 17.6521683, 332.672241),
-		["54"] = Vector3.new(191.823471, 68.6525497, -163.641815),
-		["55"] = Vector3.new(-54.3523827, 19.4243584, -62.2778854),
-		["56"] = Vector3.new(34.8642769, 57.9650383, 190.510757),
-		["57"] = Vector3.new(-122.991501, 67.3708878, -218.436462),
-		["58"] = Vector3.new(83.8066254, 69.4766388, -142.149338),
-		["59"] = Vector3.new(263.946198, 57.1383095, 108.368507),
-		["60"] = Vector3.new(600.636108, 177.167313, -436.898132),
-		["61"] = Vector3.new(499.400879, 177.16832, -420.62561),
-		["62"] = Vector3.new(518.912781, 177.167679, -291.619812),
-		["63"] = Vector3.new(524.506042, 151.901627, -411.875977),
-		["64"] = Vector3.new(48.2289505, 31.3100128, 705.013367),
+		["1"]  = Vector3.new(110.860512, 63.717793, -59.577717),
+		["53"] = Vector3.new(-124.223053, 71.746895, 558.220947),
+		["43"] = Vector3.new(98.660065, 35.202812, 355.489014),
+		["63"] = Vector3.new(10.384277, 180.088516, -10091.184570),
+		["47"] = Vector3.new(-365.968414, 18.324713, 464.209625),
+		["37"] = Vector3.new(301.856354, 25283.027344, -807.704651),
+		["67"] = Vector3.new(43.543564, 13.869005, 373.797791),
+		["57"] = Vector3.new(499.400879, 177.168320, -420.625610),
+		["27"] = Vector3.new(191.823471, 68.652550, -163.641815),
+		["17"] = Vector3.new(-380.694702, 54.680187, 206.632004),
+		["13"] = Vector3.new(6.461484, 228.992645, -169.161346),
+		["33"] = Vector3.new(-383.714447, 55.455921, 82.082062),
+		["23"] = Vector3.new(48.228951, 31.310013, 705.013367),
+		["42"] = Vector3.new(87.596565, 310.219116, -294.333862),
+		["52"] = Vector3.new(-115.209618, 71.746895, 558.186157),
+		["62"] = Vector3.new(68.824310, 65.600937, 316.639740),
+		["72"] = Vector3.new(242.000000, 70.129997, -170.000000),
+		["36"] = Vector3.new(226.929382, 25252.527344, -716.011475),
+		["46"] = Vector3.new(-374.187805, 19.293209, 494.705688),
+		["56"] = Vector3.new(600.636108, 177.167313, -436.898132),
+		["66"] = Vector3.new(23.648874, 13.869005, 390.582703),
+		["16"] = Vector3.new(146.350906, 37.496033, 266.085938),
+		["26"] = Vector3.new(-219.292206, 20.458292, -59.905369),
+		["12"] = Vector3.new(142.535141, 69.527115, -217.049393),
+		["22"] = Vector3.new(-168.461044, 33.840431, 76.929298),
+		["32"] = Vector3.new(-233.272583, 43.782169, 418.712189),
+		["71"] = Vector3.new(466.000000, 98.121002, -170.000000),
+		["61"] = Vector3.new(-132.090942, 100.209625, 545.749756),
+		["51"] = Vector3.new(-105.185333, 71.710907, 557.966675),
+		["41"] = Vector3.new(3.357522, 304.230499, -266.304932),
+		["65"] = Vector3.new(47.835739, 52.594234, 398.930115),
+		["55"] = Vector3.new(-468.904083, 100.259338, 173.329849),
+		["45"] = Vector3.new(77.324898, 180.088516, -10000.561523),
+		["35"] = Vector3.new(369.314270, 84.816162, -237.076523),
+		["59"] = Vector3.new(518.912781, 177.167679, -291.619812),
+		["49"] = Vector3.new(-412.989502, 19.293211, 467.024170),
+		["39"] = Vector3.new(-336.530914, 132.367783, -384.928253),
+		["29"] = Vector3.new(131.649078, 117.509262, -63.043633),
+		["69"] = Vector3.new(144.555252, 150.454254, -10097.378906),
+		["3"]  = Vector3.new(-293.512756, 50.179939, 266.900116),
+		["2"]  = Vector3.new(314.311920, 61.638416, 213.963852),
+		["19"] = Vector3.new(5.215156, 174.664230, -96.960167),
+		["4"]  = Vector3.new(263.946198, 57.138309, 108.368507),
+		["7"]  = Vector3.new(-357.538208, 129.899857, -227.214569),
+		["6"]  = Vector3.new(218.618195, 35.426796, -29.125578),
+		["25"] = Vector3.new(-43.275429, 194.356796, -263.054291),
+		["15"] = Vector3.new(-43.689491, 148.992645, -249.789032),
+		["31"] = Vector3.new(175.854858, 69.527115, -223.771194),
+		["21"] = Vector3.new(32.650867, 13.400006, 405.863403),
+		["11"] = Vector3.new(-122.991501, 67.370888, -218.436462),
+		["60"] = Vector3.new(-138.005035, 161.062897, -322.544891),
+		["70"] = Vector3.new(-18.000000, 6.000000, 206.000000),
+		["40"] = Vector3.new(-481.066132, 71.706055, -0.259687),
+		["50"] = Vector3.new(-312.023132, 117.165382, 477.466858),
+		["54"] = Vector3.new(87.332230, 54.940220, 396.049072),
+		["64"] = Vector3.new(329.359253, 193.140259, -234.349808),
+		["34"] = Vector3.new(338.761719, 130.920792, -233.843643),
+		["44"] = Vector3.new(14.022794, 4.592814, 68.149002),
+		["48"] = Vector3.new(-189.317154, 64.263229, 367.294739),
+		["58"] = Vector3.new(524.506042, 151.901627, -411.875977),
+		["28"] = Vector3.new(272.849243, 97.663795, 457.226166),
+		["38"] = Vector3.new(271.973450, 25294.128906, -871.085388),
+		["68"] = Vector3.new(-465.841278, 109.445412, -175.784439),
+		["18"] = Vector3.new(-436.266388, 94.315430, 49.612404),
+		["14"] = Vector3.new(-444.322754, 122.515938, 353.599243),
+		["24"] = Vector3.new(41.735954, 151.055878, -531.890930),
+		["5"]  = Vector3.new(-64.231522, 37.716927, 113.387741),
+		["9"]  = Vector3.new(139.456604, 64.431046, 258.481812),
+		["20"] = Vector3.new(-54.352383, 19.424358, -62.277885),
+		["30"] = Vector3.new(-232.845062, 184.924271, -249.955322),
+		["8"]  = Vector3.new(34.864277, 57.965038, 190.510757),
+		["10"] = Vector3.new(83.806625, 69.476639, -142.149338),
+	
 	
 	}
 	
@@ -576,78 +593,86 @@ local function UYMDK_fake_script() -- ItemTPer_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(UYMDK_fake_script)()
-local function UMOY_fake_script() -- ItemTPer_2.otherbuttons 
+coroutine.wrap(QEFCRW_fake_script)()
+local function IJSUTTZ_fake_script() -- ItemTPer_2.otherbuttons 
 	local script = Instance.new('LocalScript', ItemTPer_2)
 
 	local plr = game.Players.LocalPlayer
 	local frame = script.Parent
 	
 	local locationsTbl = {
-		["1"] = Vector3.new(-54.3523827, 19.4243584, -62.2778854),
-		["2"] = Vector3.new(-293.512756, 50.1799393, 266.900116),
-		["3"] = Vector3.new(-357.538208, 129.899857, -227.214569),
-		["4"] = Vector3.new(139.456604, 64.4310455, 258.481812),
-		["5"] = Vector3.new(142.535141, 69.5271149, -217.049393),
-		["6"] = Vector3.new(6.46148396, 228.992645, -169.161346),
-		["7"] = Vector3.new(-444.322754, 122.515938, 353.599243),
-		["8"] = Vector3.new(-43.6894913, 148.992645, -249.789032),
-		["9"] = Vector3.new(146.350906, 37.4960327, 266.085938),
-		["10"] = Vector3.new(-380.694702, 54.6801872, 206.632004),
-		["11"] = Vector3.new(-436.266388, 94.3154297, 49.6124039),
-		["12"] = Vector3.new(5.21515608, 174.66423, -96.9601669),
-		["13"] = Vector3.new(32.6508675, 13.4000063, 405.863403),
-		["14"] = Vector3.new(-168.461044, 33.8404312, 76.9292984),
-		["15"] = Vector3.new(41.7359543, 151.055878, -531.89093),
-		["16"] = Vector3.new(-43.2754288, 194.356796, -263.054291),
-		["17"] = Vector3.new(-219.292206, 20.458292, -59.9053688),
-		["18"] = Vector3.new(272.849243, 97.6637955, 457.226166),
-		["19"] = Vector3.new(-232.845062, 184.924271, -249.955322),
-		["20"] = Vector3.new(175.854858, 69.5271149, -223.771194),
-		["21"] = Vector3.new(-233.272583, 43.7821693, 418.712189),
-		["22"] = Vector3.new(-383.714447, 55.4559212, 82.0820618),
-		["23"] = Vector3.new(338.761719, 130.920792, -233.843643),
-		["24"] = Vector3.new(369.31427, 84.8161621, -237.076523),
-		["25"] = Vector3.new(226.929382, 25252.5273, -716.011475),
-		["26"] = Vector3.new(301.856354, 25283.0273, -807.704651),
-		["27"] = Vector3.new(271.97345, 25294.1289, -871.085388),
-		["28"] = Vector3.new(-336.530914, 132.367783, -384.928253),
-		["29"] = Vector3.new(-481.066132, 71.7060547, -0.259687424),
-		["30"] = Vector3.new(3.35752201, 304.230499, -266.304932),
-		["31"] = Vector3.new(87.5965652, 310.219116, -294.333862),
-		["32"] = Vector3.new(98.6600647, 35.2028122, 355.489014),
-		["33"] = Vector3.new(77.3248978, 180.088516, -10000.5615),
-		["34"] = Vector3.new(-374.187805, 19.2932091, 494.705688),
-		["35"] = Vector3.new(-365.968414, 18.3247128, 464.209625),
-		["36"] = Vector3.new(-189.317154, 64.2632294, 367.294739),
-		["37"] = Vector3.new(-412.989502, 19.293211, 467.02417),
-		["38"] = Vector3.new(-312.023132, 117.165382, 477.466858),
-		["39"] = Vector3.new(-105.185333, 71.710907, 557.966675),
-		["40"] = Vector3.new(-115.209618, 71.7468948, 558.186157),
-		["41"] = Vector3.new(-124.223053, 71.7468948, 558.220947),
-		["42"] = Vector3.new(-468.904083, 100.259338, 173.329849),
-		["43"] = Vector3.new(-138.005035, 161.062897, -322.544891),
-		["44"] = Vector3.new(-132.090942, 100.209625, 545.749756),
-		["45"] = Vector3.new(68.8243103, 65.6009369, 316.63974),
-		["46"] = Vector3.new(10.3842773, 180.088516, -10091.1846),
-		["47"] = Vector3.new(87.3322296, 54.9402199, 396.049072),
-		["48"] = Vector3.new(131.649078, 117.509262, -63.0436325),
-		["49"] = Vector3.new(-64.2315216, 37.7169266, 113.387741),
-		["50"] = Vector3.new(218.618195, 35.426796, -29.1255779),
-		["51"] = Vector3.new(314.31192, 61.6384163, 213.963852),
-		["52"] = Vector3.new(14.0227938, 4.59281445, 68.1490021),
-		["53"] = Vector3.new(-378.062561, 17.6521683, 332.672241),
-		["54"] = Vector3.new(191.823471, 68.6525497, -163.641815),
-		["55"] = Vector3.new(110.860512, 63.7177925, -59.5777168),
-		["56"] = Vector3.new(34.8642769, 57.9650383, 190.510757),
-		["57"] = Vector3.new(-122.991501, 67.3708878, -218.436462),
-		["58"] = Vector3.new(83.8066254, 69.4766388, -142.149338),
-		["59"] = Vector3.new(263.946198, 57.1383095, 108.368507),
-		["60"] = Vector3.new(600.636108, 177.167313, -436.898132),
-		["61"] = Vector3.new(499.400879, 177.16832, -420.62561),
-		["62"] = Vector3.new(518.912781, 177.167679, -291.619812),
-		["63"] = Vector3.new(524.506042, 151.901627, -411.875977),
-		["64"] = Vector3.new(48.2289505, 31.3100128, 705.013367),
+		["1"]  = Vector3.new(110.860512, 63.717793, -59.577717),
+		["53"] = Vector3.new(-124.223053, 71.746895, 558.220947),
+		["43"] = Vector3.new(98.660065, 35.202812, 355.489014),
+		["63"] = Vector3.new(10.384277, 180.088516, -10091.184570),
+		["47"] = Vector3.new(-365.968414, 18.324713, 464.209625),
+		["37"] = Vector3.new(301.856354, 25283.027344, -807.704651),
+		["67"] = Vector3.new(43.543564, 13.869005, 373.797791),
+		["57"] = Vector3.new(499.400879, 177.168320, -420.625610),
+		["27"] = Vector3.new(191.823471, 68.652550, -163.641815),
+		["17"] = Vector3.new(-380.694702, 54.680187, 206.632004),
+		["13"] = Vector3.new(6.461484, 228.992645, -169.161346),
+		["33"] = Vector3.new(-383.714447, 55.455921, 82.082062),
+		["23"] = Vector3.new(48.228951, 31.310013, 705.013367),
+		["42"] = Vector3.new(87.596565, 310.219116, -294.333862),
+		["52"] = Vector3.new(-115.209618, 71.746895, 558.186157),
+		["62"] = Vector3.new(68.824310, 65.600937, 316.639740),
+		["72"] = Vector3.new(242.000000, 70.129997, -170.000000),
+		["36"] = Vector3.new(226.929382, 25252.527344, -716.011475),
+		["46"] = Vector3.new(-374.187805, 19.293209, 494.705688),
+		["56"] = Vector3.new(600.636108, 177.167313, -436.898132),
+		["66"] = Vector3.new(23.648874, 13.869005, 390.582703),
+		["16"] = Vector3.new(146.350906, 37.496033, 266.085938),
+		["26"] = Vector3.new(-219.292206, 20.458292, -59.905369),
+		["12"] = Vector3.new(142.535141, 69.527115, -217.049393),
+		["22"] = Vector3.new(-168.461044, 33.840431, 76.929298),
+		["32"] = Vector3.new(-233.272583, 43.782169, 418.712189),
+		["71"] = Vector3.new(466.000000, 98.121002, -170.000000),
+		["61"] = Vector3.new(-132.090942, 100.209625, 545.749756),
+		["51"] = Vector3.new(-105.185333, 71.710907, 557.966675),
+		["41"] = Vector3.new(3.357522, 304.230499, -266.304932),
+		["65"] = Vector3.new(47.835739, 52.594234, 398.930115),
+		["55"] = Vector3.new(-468.904083, 100.259338, 173.329849),
+		["45"] = Vector3.new(77.324898, 180.088516, -10000.561523),
+		["35"] = Vector3.new(369.314270, 84.816162, -237.076523),
+		["59"] = Vector3.new(518.912781, 177.167679, -291.619812),
+		["49"] = Vector3.new(-412.989502, 19.293211, 467.024170),
+		["39"] = Vector3.new(-336.530914, 132.367783, -384.928253),
+		["29"] = Vector3.new(131.649078, 117.509262, -63.043633),
+		["69"] = Vector3.new(144.555252, 150.454254, -10097.378906),
+		["3"]  = Vector3.new(-293.512756, 50.179939, 266.900116),
+		["2"]  = Vector3.new(314.311920, 61.638416, 213.963852),
+		["19"] = Vector3.new(5.215156, 174.664230, -96.960167),
+		["4"]  = Vector3.new(263.946198, 57.138309, 108.368507),
+		["7"]  = Vector3.new(-357.538208, 129.899857, -227.214569),
+		["6"]  = Vector3.new(218.618195, 35.426796, -29.125578),
+		["25"] = Vector3.new(-43.275429, 194.356796, -263.054291),
+		["15"] = Vector3.new(-43.689491, 148.992645, -249.789032),
+		["31"] = Vector3.new(175.854858, 69.527115, -223.771194),
+		["21"] = Vector3.new(32.650867, 13.400006, 405.863403),
+		["11"] = Vector3.new(-122.991501, 67.370888, -218.436462),
+		["60"] = Vector3.new(-138.005035, 161.062897, -322.544891),
+		["70"] = Vector3.new(-18.000000, 6.000000, 206.000000),
+		["40"] = Vector3.new(-481.066132, 71.706055, -0.259687),
+		["50"] = Vector3.new(-312.023132, 117.165382, 477.466858),
+		["54"] = Vector3.new(87.332230, 54.940220, 396.049072),
+		["64"] = Vector3.new(329.359253, 193.140259, -234.349808),
+		["34"] = Vector3.new(338.761719, 130.920792, -233.843643),
+		["44"] = Vector3.new(14.022794, 4.592814, 68.149002),
+		["48"] = Vector3.new(-189.317154, 64.263229, 367.294739),
+		["58"] = Vector3.new(524.506042, 151.901627, -411.875977),
+		["28"] = Vector3.new(272.849243, 97.663795, 457.226166),
+		["38"] = Vector3.new(271.973450, 25294.128906, -871.085388),
+		["68"] = Vector3.new(-465.841278, 109.445412, -175.784439),
+		["18"] = Vector3.new(-436.266388, 94.315430, 49.612404),
+		["14"] = Vector3.new(-444.322754, 122.515938, 353.599243),
+		["24"] = Vector3.new(41.735954, 151.055878, -531.890930),
+		["5"]  = Vector3.new(-64.231522, 37.716927, 113.387741),
+		["9"]  = Vector3.new(139.456604, 64.431046, 258.481812),
+		["20"] = Vector3.new(-54.352383, 19.424358, -62.277885),
+		["30"] = Vector3.new(-232.845062, 184.924271, -249.955322),
+		["8"]  = Vector3.new(34.864277, 57.965038, 190.510757),
+		["10"] = Vector3.new(83.806625, 69.476639, -142.149338),
 	
 	}
 	
@@ -692,7 +717,6 @@ local function UMOY_fake_script() -- ItemTPer_2.otherbuttons
 			"BeesBuzz123",
 			"15MMembers",
 			"ThreeBeeVee",
-			"777"
 		}
 	
 		for _, code in ipairs(codes) do
@@ -744,11 +768,25 @@ local function UMOY_fake_script() -- ItemTPer_2.otherbuttons
 	end
 	
 	
-	collectibles.ChildRemoved:Connect(function()
-		if autoEnabled then
-			nextLocation()
+	collectibles.ChildRemoved:Connect(function(child)
+		if not autoEnabled then return end
+	
+		-- Ensure it's a BasePart
+		if not child:IsA("BasePart") then return end
+	
+		-- Check for FrontDecal
+		local decal = child:FindFirstChild("FrontDecal")
+		if decal and decal:IsA("Decal") then
+			-- Ignore if it has the blocked decal
+			if decal.Texture == "rbxassetid://6087969886" then
+				return
+			end
 		end
+	
+		-- Valid collectible removed → move on
+		nextLocation()
 	end)
+	
 	
 	miscbuttonsfolder.skip.Activated:Connect(function()
 		if autoEnabled then
@@ -890,6 +928,18 @@ local function UMOY_fake_script() -- ItemTPer_2.otherbuttons
 		goTo(fieldLocations.stickerprinter)
 	end)
 	
+	miscbuttonsfolder.present.Activated:Connect(function()
+		local args = {
+			"GivePresentBrown BearXmas2025"
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("SelectNPCOption"):FireServer(unpack(args))
+	task.wait(0.5)
+		local args = {
+			"ReceiveXmas2025Boost"
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("SelectNPCOption"):FireServer(unpack(args))
+	end)
+	
 	shopbuttonsfolder.basicegg.Activated:Connect(function()
 		local args = {
 			"Purchase",
@@ -961,7 +1011,7 @@ local function UMOY_fake_script() -- ItemTPer_2.otherbuttons
 	
 		for _, quest in ipairs(Quests) do
 			GiveQuest:FireServer(quest)
-			task.wait(0.212)
+			task.wait(0.2)
 		end
 	end
 	
@@ -1063,8 +1113,8 @@ local function UMOY_fake_script() -- ItemTPer_2.otherbuttons
 	local ALWAYS_IGNORED_TEXTURE = "rbxassetid://1472135114"
 	local TREATS_TEXTURE = "rbxassetid://2028574353"
 	
-	local TWEEN_SPEED = 60 -- studs per second
-	local MAX_DISTANCE = 50
+	local TWEEN_SPEED = 65 -- studs per second
+	local MAX_DISTANCE = 65
 	local Y_OFFSET = 1.25
 	
 	-- State
@@ -1318,4 +1368,4 @@ local function UMOY_fake_script() -- ItemTPer_2.otherbuttons
 	end)
 	
 end
-coroutine.wrap(UMOY_fake_script)()
+coroutine.wrap(IJSUTTZ_fake_script)()
